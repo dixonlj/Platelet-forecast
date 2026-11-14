@@ -41,3 +41,8 @@ paper/layout_preview/
 
 # Include the v9 changelog in this release package
 !paper/changes_v8_to_v9.md
+
+# These summary tables are part of the public release package
+!results/aachen/inventory_daily_*.csv
+!results/aachen/inventory_k_sweep.csv
+!results/realistic/k_sweep_base_mean_sd.csv
