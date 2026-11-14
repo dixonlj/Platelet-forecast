@@ -1,0 +1,43 @@
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Local experiment logs and caches (regenerated on rerun)
+results/m4/trackio/
+results/m6/12_sarima_forecasts_*.csv
+results/**/*per_seed*.csv
+results/**/inventory_daily*.csv
+results/**/*k_sweep*.csv
+results/m4/05b_chronos_forecasts.csv
+results/holdout_forecasts.csv
+results/cv_fold_scores.csv
+results/**/*stdout*.txt
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Never commit secrets or private data
+.env
+*.key
+
+# Cached forecasts and logs recreated by the scripts
+results/m9/27_gb_detrended_forecasts_*.csv
+results/**/*stdout*.txt
+results/**/*per_seed*.csv
+
+# Working copies not for release
+paper/*review*
+paper/changes_*
+paper/refcheck/
+paper/archive/
+paper/__pycache__/
+paper/layout_preview/
+
+# Include the v9 changelog in this release package
+!paper/changes_v8_to_v9.md

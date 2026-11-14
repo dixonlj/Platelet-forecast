@@ -1,0 +1,39 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite it as below, and also cite the data source (Schilling et al. 2022)."
+title: "Do better forecasts reduce platelet waste? A simulation over seven test years of public data from a German university hospital"
+type: software
+authors:
+  - family-names: Dixon
+    given-names: Liam
+    orcid: "https://orcid.org/0009-0003-0610-197X"
+version: "0.9.0"
+date-released: "2026-11-14"
+license: MIT
+repository-code: "https://github.com/dixonlj/Platelet-forecast"
+keywords:
+  - platelet inventory
+  - demand forecasting
+  - blood bank
+  - simulation
+  - public data
+  - educational
+references:
+  - type: article
+    title: "Reduction of Platelet Outdating and Shortage by Forecasting Demand With Statistical Learning and Deep Neural Networks: Modeling Study"
+    authors:
+      - family-names: Schilling
+        given-names: Maximilian
+      - family-names: Rickmann
+        given-names: Lennart
+      - family-names: Hutschenreuter
+        given-names: Gabriele
+      - family-names: Spreckelsen
+        given-names: Cord
+    journal: "JMIR Medical Informatics"
+    year: 2022
+    volume: 10
+    issue: 2
+    start: e29978
+    doi: "10.2196/29978"
+    license: CC-BY-4.0
+    notes: "Data source (Multimedia Appendix 1). PMCID PMC8848235."
