@@ -1,0 +1,31 @@
+name: materialize-release
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  materialize:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+      - name: Decode the staged release tarball and verify checksums
+        run: python3 scripts/materialize_release.py
+      - name: Remove staging files and this one-shot workflow
+        run: |
+          rm -rf staging
+          rm -f .github/workflows/materialize-release.yml
+          rm -f scripts/materialize_release.py
+          rmdir .github/workflows 2>/dev/null || true
+          rmdir .github 2>/dev/null || true
+      - name: Commit the materialized release tree
+        run: |
+          git config user.name "dixonlj"
+          git config user.email "dixonlj1993@gmail.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Add the full platelet-forecast release tree, including binary paper, charts, and data files."
+            git push
+          fi
