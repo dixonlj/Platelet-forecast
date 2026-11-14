@@ -1,0 +1,17 @@
+SYNTHETIC teaching series (not real data), test year 2024
+  tue_sat  pooled=False standard    : max diffs waste 4.5e-13 emerg 0.0e+00 short days 0.0e+00 weekday 0.0e+00; blocks-vs-total 0.0e+00; m10 0.1s
+     match_at check (target 8 short days): max diff 0.0e+00
+  tue_sat  pooled=False expiry_aware: max diffs waste 9.1e-13 emerg 0.0e+00 short days 0.0e+00 weekday 0.0e+00; blocks-vs-total 0.0e+00; m10 0.2s
+     match_at check (target 8 short days): max diff 0.0e+00
+  tue_sat  pooled=True  standard    : max diffs waste 1.1e-13 emerg 0.0e+00 short days 0.0e+00 weekday 0.0e+00; blocks-vs-total 0.0e+00; m10 0.0s
+     match_at check (target 8 short days): max diff nan
+  tue_sun  pooled=False standard    : max diffs waste 4.5e-13 emerg 0.0e+00 short days 0.0e+00 weekday 0.0e+00; blocks-vs-total 0.0e+00; m10 0.1s
+     match_at check (target 8 short days): max diff 0.0e+00
+  tue_sun  pooled=False expiry_aware: max diffs waste 9.1e-13 emerg 0.0e+00 short days 0.0e+00 weekday 0.0e+00; blocks-vs-total 0.0e+00; m10 0.2s
+     match_at check (target 8 short days): max diff 1.8e-15
+  tue_sun  pooled=True  standard    : max diffs waste 5.7e-14 emerg 0.0e+00 short days 0.0e+00 weekday 0.0e+00; blocks-vs-total 0.0e+00; m10 0.0s
+     match_at check (target 8 short days): max diff 8.9e-16
+  R1 sanity (sigma 5/6/8): mean waste % at k=1: 8.65
+TIMING (Aachen 2010, standing order only, 30 runs): draws 0.0s, sim 0.5s
+TIMING episode draws (mean 4): 0.2s
+ALL CHECKS PASSED

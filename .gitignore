@@ -34,7 +34,7 @@ results/**/*per_seed*.csv
 # Working copies not for release
 paper/*review*
 paper/changes_*
-paper/refcheck/
+paper/refcheck/*
 paper/archive/
 paper/__pycache__/
 paper/layout_preview/
@@ -46,3 +46,8 @@ paper/layout_preview/
 !results/aachen/inventory_daily_*.csv
 !results/aachen/inventory_k_sweep.csv
 !results/realistic/k_sweep_base_mean_sd.csv
+
+# v10 release package
+results/m10/raw/
+!paper/changes_v9_to_v10.md
+!paper/refcheck/v10_number_check.md

@@ -7,7 +7,23 @@ An educational project that forecasts daily platelet demand and simulates a hosp
 > **Educational and advisory only. Not for clinical use.**
 > This is a learning project. It is not a clinical tool, not a blood-bank ordering system and not advice for any hospital. Nothing here should be used to decide whether a patient receives a unit, or how many units a real blood bank should order or keep. It uses only public, aggregate data and has never been connected to any hospital system.
 
-A preprint manuscript (draft v9) is in [`paper/`](paper/).
+A manuscript is in [`paper/`](paper/). **Draft v10** (latest) reports the confirmatory re-analysis that followed a written analysis plan; draft v9 is the earlier exploratory study.
+
+## Latest: draft v10 (re-analysis per a written analysis plan)
+
+The analysis plan ([`prereg/osf_preregistration_final.md`](prereg/osf_preregistration_final.md)) was finalised and its 35 inputs fingerprinted ([`prereg/osf_prereg_input_hashes.txt`](prereg/osf_prereg_input_hashes.txt)) before the analyses were run on 14 November 2026. It was registered on OSF later the same day, **after** the analyses; the paper states this as a limitation and as deviation D8.
+
+- **The calibrated simulation failed its own preset check.** Simulated waste was 5.22% against 9.74% recorded; emergency units per short day were 5.00 against 8.82; the weekday pattern missed its limit (TVD 0.226 against 0.20). Every result is conditional on that.
+- **Aachen: no forecast was shown to waste less than last year's standing order** (5.30% waste). SARIMA −0.33 points (95% CI −0.88 to +0.22), Chronos-Bolt −0.12, detrended gradient boosting +0.07, gradient boosting +0.17. None was shown to be equivalent either.
+- **Stanford (public `pip` data): estimates favoured the forecasts by 1.4–2.3 points, but none survived the Holm correction** (adjusted p ≥ 0.10). Under the plan's rule, this is a consistent null.
+- **Exploratory:** the delivery calendar mattered most (SARIMA −2.47 points under Tue–Sat, −1.77 under Mon–Fri).
+
+Files:
+- [`paper/draft_v10_layout.pdf`](paper/draft_v10_layout.pdf) and [`paper/supplement_v10_layout.pdf`](paper/supplement_v10_layout.pdf);
+- the journal plan: [`paper/journal_plan_v10.md`](paper/journal_plan_v10.md);
+- deviations: [`paper/prereg_deviations.md`](paper/prereg_deviations.md);
+- the note to add to the OSF registration: [`paper/osf_update_text.md`](paper/osf_update_text.md);
+- the results in plain English: [`paper/revision_results_summary.md`](paper/revision_results_summary.md).
 
 ## What it does
 
@@ -33,7 +49,7 @@ Daily platelet counts from **University Hospital Aachen, Germany, 2008–2018**:
 
 The original appendix is included unchanged in `data/public/`, with a trimmed CSV copy (columns removed). See [`data/README.md`](data/README.md). This project is not affiliated with or endorsed by University Hospital Aachen or the source authors.
 
-## Results in brief
+## Results in brief (draft v9, exploratory)
 
 Simulation results on one German hospital's data. They are a learning exercise, not evidence for any hospital. Figures are 7-year means for 2012–2018, at each year's recorded number of short days, unless noted.
 
@@ -94,7 +110,25 @@ python scripts/31_charts_v6.py              #   v6/v7/v9 charts, including the s
 python scripts/34_tables_v8.py              #   standing-order tables from saved results
 ```
 
-Scripts 32, 33, 35 and 36 only check that numbers quoted in a given draft match the result files; they are not needed to reproduce the results.
+Draft v10 (calibrated simulation, run per the analysis plan):
+
+```bash
+python scripts/37_m10_selftest.py           # new simulator checked on the synthetic series only
+python scripts/38_m10_calibration.py        # calibration on 2009-2011, standing order only
+python scripts/39_m10_validation.py         # validation on 2012-2018, standing order only
+python scripts/40_m10_run_comparisons.py    # primary, secondary and sensitivity simulations
+python scripts/41_m10_stats.py              # mixed models, Holm, labels, secondary tables
+python scripts/42_m10_charts_descriptive.py # charts and descriptive accuracy
+python study2/scripts/10_m10_forecasts.py   # Stanford: standing order and detrended GB forecasts
+python study2/scripts/10b_m10_chronos.py    # Stanford: Chronos-Bolt (optional packages)
+python study2/scripts/11_m10_stanford_replication.py
+python scripts/43_tables_v10.py             # v10 paper tables from the results files
+python scripts/44_check_v10_numbers.py      # number check for draft v10
+```
+
+The Stanford scripts expect the public `pip` example data and the milestone S2-1 forecasts in `study2/`. Those inputs are not included here; see the paper for the source (https://github.com/bnaras/pip, GPL-2 or later). Per-run raw simulation files (`results/m10/raw/`) are not included either; script 40 recreates them.
+
+Scripts 32, 33, 35, 36 and 44 only check that numbers quoted in a given draft match the result files; they are not needed to reproduce the results.
 
 Notes:
 
@@ -117,8 +151,9 @@ Notes:
 | `12`–`17` | 6. SARIMA, cost weights, life-on-arrival sweep | `results/m6/` |
 | `19`–`24` | 8. Prior-year cushion, robustness, accuracy tests | `results/m8/` |
 | `25`–`36` | 9. Delivery calendars, standing order, detrended boosting, paper charts and checks | `results/m9/`, `charts/`, `paper/` |
+| `37`–`44`, `lib_m10.py`; `study2/scripts/10`–`11`, `lib_s2.py` | 10. Calibrated re-analysis per the analysis plan, Stanford replication, v10 tables and checks | `results/m10/`, `study2/results/s2m10/`, `charts/m10_*.png`, `paper/` |
 
-Shared helpers are `scripts/lib_m4.py` and `scripts/lib_m5.py`.
+Shared helpers are `scripts/lib_m4.py`, `scripts/lib_m5.py` and `scripts/lib_m10.py`.
 
 ## Folder layout
 
@@ -128,10 +163,12 @@ LICENSE            MIT licence for the code
 CITATION.cff       how to cite this repository
 requirements.txt   pinned Python packages
 data/              public Aachen data (CC BY 4.0) and synthetic example data
-scripts/           analysis code (01-17, 19-36, plus shared helpers)
+scripts/           analysis code (01-17, 19-44, plus shared helpers)
 charts/            key charts, including those used in the paper
-results/           summary tables and run logs for each milestone
-paper/             draft v9 layout PDFs of the manuscript and supplement
+results/           summary tables and run logs for each milestone (m10 = v10 re-analysis)
+study2/            Stanford replication code and results (no data files)
+prereg/            the analysis plan and its input fingerprints (registered on OSF after the analyses)
+paper/             draft v10 (sources, Word, PDF), journal plan, deviations, OSF note; draft v9 layout PDFs
 ```
 
 ## Main assumptions and limits
@@ -149,6 +186,6 @@ paper/             draft v9 layout PDFs of the manuscript and supplement
 
 - **Code:** MIT licence (see `LICENSE`).
 - **Data:** CC BY 4.0, Schilling et al. 2022 (see above).
-- **Citation:** if you use this work, please cite it using `CITATION.cff` and also cite the data source. A Zenodo DOI will be added when the archive is released.
+- **Citation:** if you use this work, please cite it using `CITATION.cff` and also cite the data source. A Zenodo DOI will be added when the archive is released. The OSF registration DOI will be added when it is issued.
 
 Author: Liam Dixon, independent researcher ([ORCID 0009-0003-0610-197X](https://orcid.org/0009-0003-0610-197X)). Personal, educational project, not funded or endorsed by any employer.
