@@ -1,0 +1,8 @@
+model,diff_vs_dow4_mean,diff_sd,diff_p05,diff_p95,share_of_seeds_better_than_dow4
+Use yesterday,14.526,1.216,12.997,16.292,0.0
+Last-7-day average,4.292,1.135,2.113,6.224,0.0
+Same weekday last week,1.247,0.611,0.166,2.04,0.033
+4-week weekday average,0.0,0.0,0.0,0.0,0.0
+Gradient boosting,-1.534,0.522,-2.362,-0.566,1.0
+Authors' LASSO (ref.),-0.951,0.473,-1.496,-0.248,0.967
+Authors' RNN (ref.),-1.72,0.637,-2.363,-0.313,1.0

@@ -1,0 +1,60 @@
+=== Milestone 6: SARIMA added to the multi-year test (hospital short days, 30 seeds) ===
+check vs script 08: 630 rows, max |waste diff| = 0.00e+00
+Waste % mean:
+model  chronos   dow4   hgbr  sarima
+year                                
+2012      7.66   8.57   8.97    7.44
+2013      7.23   7.63   7.25    7.70
+2014     11.96  13.78  11.91   11.97
+2015      7.62   7.39   7.88    7.55
+2016     10.32   9.96   9.57    9.78
+2017      7.08   6.86   7.63    7.14
+2018      6.88   8.32   6.78    7.06
+mean: {'chronos': 8.39, 'dow4': 8.93, 'hgbr': 8.57, 'sarima': 8.38}
+Emergency units mean:
+model  chronos   dow4   hgbr  sarima
+year                                
+2012     205.0  215.0  217.0   197.0
+2013     149.0  144.0  141.0   146.0
+2014     104.0   90.0   97.0   104.0
+2015     194.0  228.0  186.0   192.0
+2016     164.0  204.0  163.0   172.0
+2017     242.0  264.0  237.0   236.0
+2018     189.0  174.0  192.0   183.0
+mean: {'chronos': 178.2, 'dow4': 188.4, 'hgbr': 176.1, 'sarima': 175.9}
+Wasted + emergency units mean:
+model  chronos   dow4   hgbr  sarima
+year                                
+2012     526.0  574.0  592.0   509.0
+2013     476.0  489.0  469.0   494.0
+2014     563.0  618.0  554.0   563.0
+2015     564.0  588.0  569.0   560.0
+2016     606.0  631.0  573.0   592.0
+2017     601.0  612.0  623.0   598.0
+2018     574.0  638.0  571.0   578.0
+mean: {'chronos': 558.6, 'dow4': 593.0, 'hgbr': 564.7, 'sarima': 556.2}
+1-day MAE:
+model  chronos   dow4   hgbr  sarima
+year                                
+2012     3.727  4.038  3.955   3.607
+2013     3.543  3.992  3.726   3.521
+2014     3.489  3.831  3.366   3.470
+2015     4.138  4.513  3.976   4.038
+2016     3.923  4.223  3.826   3.925
+2017     4.006  4.210  4.148   3.894
+2018     3.905  4.360  3.974   3.802
+mean: {'chronos': 3.819, 'dow4': 4.167, 'hgbr': 3.853, 'sarima': 3.751}
+DM p-values (negative mean diff = SARIMA more accurate):
+model  DM_sarima_vs_chronos  DM_sarima_vs_dow4  DM_sarima_vs_hgbr
+year                                                             
+2012                 0.0246             0.0001             0.0278
+2013                 0.6989             0.0000             0.0495
+2014                 0.7132             0.0010             0.1297
+2015                 0.0479             0.0000             0.5163
+2016                 0.9780             0.0107             0.2321
+2017                 0.0913             0.0034             0.0427
+2018                 0.0701             0.0000             0.1189
+hospital: SARIMA wastes less than WA in 4/7 years; less than GB in 3/7; mean {'chronos': 8.39, 'dow4': 8.93, 'hgbr': 8.57, 'sarima': 8.38}
+fixed20: SARIMA wastes less than WA in 7/7 years; less than GB in 2/7; mean {'chronos': 11.46, 'dow4': 12.55, 'hgbr': 11.59, 'sarima': 11.62}
+fixed50: SARIMA wastes less than WA in 4/7 years; less than GB in 6/7; mean {'chronos': 6.06, 'dow4': 6.43, 'hgbr': 6.34, 'sarima': 6.06}
+SARIMA fewer wasted+emergency than WA in 6/7 years; mean gap -36.8 units/yr

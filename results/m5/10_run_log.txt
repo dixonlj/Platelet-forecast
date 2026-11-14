@@ -1,0 +1,16 @@
+=== US rules one change at a time, 2018, 31 short days ===
+                                   scenario model  target_short_days  waste_pct_mean  waste_p05  waste_p95  emergency_units_mean  wasted_plus_emergency_mean  n_seeds
+                        German rules (base)  dow4                 31            8.32       7.43       9.56                173.62                      637.95       30
+                        German rules (base)  hgbr                 31            6.78       6.09       7.92                192.31                      570.96       30
+ Only US shelf life (50/50 5-day and 7-day)  dow4                 31            4.07       3.54       4.63                168.88                      395.98       30
+ Only US shelf life (50/50 5-day and 7-day)  hgbr                 31            3.47       2.91       3.97                187.61                      381.18       30
+Only US ABO order (plasma-compatible first)  dow4                 31            7.81       6.93       8.61                182.75                      618.87       30
+Only US ABO order (plasma-compatible first)  hgbr                 31            6.30       5.63       6.92                203.40                      555.15       30
+                 Only US blood-group shares  dow4                 31            7.99       7.16       9.01                180.66                      626.98       30
+                 Only US blood-group shares  hgbr                 31            6.66       6.00       7.67                198.70                      570.73       30
+     All three US changes (German calendar)  dow4                 31            3.64       3.12       4.29                187.86                      391.13       30
+     All three US changes (German calendar)  hgbr                 31            3.03       2.57       3.52                204.34                      373.35       30
+    All three US changes + daily deliveries  dow4                 31            1.69       1.43       2.01                175.76                      270.27       30
+    All three US changes + daily deliveries  hgbr                 31            1.79       1.44       2.03                170.96                      270.70       30
+            German rules + daily deliveries  dow4                 31            3.61       2.87       4.57                163.48                      365.33       30
+            German rules + daily deliveries  hgbr                 31            3.82       3.19       4.32                160.74                      373.83       30

@@ -1,0 +1,69 @@
+=== Milestone 9 step 4: decomposition, target tests, power ===
+  model year  waste_unit_gap  emergency_unit_gap  lost_unit_gap  share_of_lost_gap_from_waste  years_fewer_waste_units  years_fewer_emergency_units
+   hgbr mean         -15.929             -12.368        -28.297                         0.563                      4.0                          4.0
+   gbdt mean          33.622             -20.213         13.408                         2.508                      2.0                          6.0
+chronos mean         -24.039             -10.281        -34.320                         0.700                      4.0                          4.0
+ sarima mean         -24.210             -12.584        -36.793                         0.658                      4.0                          4.0
+  lasso mean          -4.353             -17.355        -21.708                         0.201                      4.0                          6.0
+    rnn mean         -32.304             -13.518        -45.823                         0.705                      6.0                          5.0
+  model year  waste_unit_gap  emergency_unit_gap  lost_unit_gap  share_of_lost_gap_from_waste  years_fewer_waste_units  years_fewer_emergency_units
+chronos 2012           -38.0                -9.8          -47.8                           NaN                      NaN                          NaN
+chronos 2013           -18.1                 5.2          -12.9                           NaN                      NaN                          NaN
+chronos 2014           -69.6                14.1          -55.5                           NaN                      NaN                          NaN
+chronos 2015            11.0               -34.7          -23.7                           NaN                      NaN                          NaN
+chronos 2016            15.3               -40.3          -25.0                           NaN                      NaN                          NaN
+chronos 2017            11.2               -22.3          -11.1                           NaN                      NaN                          NaN
+chronos 2018           -80.1                15.8          -64.3                           NaN                      NaN                          NaN
+chronos mean           -24.0               -10.3          -34.3                           0.7                      4.0                          4.0
+ sarima 2012           -47.3               -17.9          -65.2                           NaN                      NaN                          NaN
+ sarima 2013             2.9                 2.4            5.2                           NaN                      NaN                          NaN
+ sarima 2014           -69.4                14.2          -55.2                           NaN                      NaN                          NaN
+ sarima 2015             7.9               -36.2          -28.3                           NaN                      NaN                          NaN
+ sarima 2016            -7.9               -31.7          -39.6                           NaN                      NaN                          NaN
+ sarima 2017            14.2               -28.7          -14.5                           NaN                      NaN                          NaN
+ sarima 2018           -69.9                 9.9          -60.0                           NaN                      NaN                          NaN
+ sarima mean           -24.2               -12.6          -36.8                           0.7                      4.0                          4.0
+  target       short_days                         outcome   model  mean_model  mean_weekday_average  years_better  n_years  sign_p  wilcoxon_p  mean_diff    ci_lo    ci_hi
+hospital recorded (21-42)                  Waste (points)    hgbr      8.5698                8.9284             4        7  1.0000      0.8125    -0.3586  -1.3019   0.5848
+hospital recorded (21-42)                  Waste (points)    gbdt      9.6486                8.9284             2        7  0.4531      0.0781     0.7203   0.0517   1.3888
+hospital recorded (21-42)                  Waste (points) chronos      8.3924                8.9284             4        7  1.0000      0.2188    -0.5360  -1.3412   0.2692
+hospital recorded (21-42)                  Waste (points)  sarima      8.3759                8.9284             4        7  1.0000      0.2969    -0.5525  -1.3188   0.2139
+hospital recorded (21-42)                  Waste (points)   lasso      8.8074                8.9284             4        7  1.0000      0.9375    -0.1210  -0.9503   0.7083
+hospital recorded (21-42)                  Waste (points)     rnn      8.2204                8.9284             6        7  0.1250      0.0781    -0.7080  -1.4318   0.0158
+hospital recorded (21-42) Wasted + emergency units a year    hgbr    564.6694              592.9660             5        7  0.4531      0.1094   -28.2967 -61.2991   4.7058
+hospital recorded (21-42) Wasted + emergency units a year    gbdt    606.3742              592.9660             2        7  0.4531      0.2188    13.4082  -9.4844  36.3008
+hospital recorded (21-42) Wasted + emergency units a year chronos    558.6462              592.9660             7        7  0.0156      0.0156   -34.3198 -54.0228 -14.6168
+hospital recorded (21-42) Wasted + emergency units a year  sarima    556.1726              592.9660             6        7  0.1250      0.0312   -36.7934 -60.7610 -12.8257
+hospital recorded (21-42) Wasted + emergency units a year   lasso    571.2578              592.9660             5        7  0.4531      0.1562   -21.7082 -52.5214   9.1051
+hospital recorded (21-42) Wasted + emergency units a year     rnn    547.1434              592.9660             6        7  0.1250      0.0312   -45.8226 -72.9983 -18.6470
+ fixed20               20                  Waste (points)    hgbr     11.5894               12.5484             6        7  0.1250      0.0312    -0.9589  -1.5591  -0.3587
+ fixed20               20                  Waste (points)    gbdt     12.8267               12.5484             3        7  1.0000      0.3750     0.2783  -0.3096   0.8663
+ fixed20               20                  Waste (points) chronos     11.4588               12.5484             7        7  0.0156      0.0156    -1.0895  -1.5281  -0.6509
+ fixed20               20                  Waste (points)  sarima     11.6194               12.5484             7        7  0.0156      0.0156    -0.9290  -1.4819  -0.3761
+ fixed20               20                  Waste (points)   lasso     12.0699               12.5484             5        7  0.4531      0.2969    -0.4785  -1.2202   0.2632
+ fixed20               20                  Waste (points)     rnn     11.4149               12.5484             7        7  0.0156      0.0156    -1.1334  -1.5596  -0.7073
+ fixed20               20 Wasted + emergency units a year    hgbr    636.6126              677.3719             6        7  0.1250      0.0312   -40.7593 -66.6948 -14.8239
+ fixed20               20 Wasted + emergency units a year    gbdt    681.6819              677.3719             5        7  0.4531      0.5781     4.3100 -25.7385  34.3585
+ fixed20               20 Wasted + emergency units a year chronos    627.5239              677.3719             7        7  0.0156      0.0156   -49.8481 -64.7939 -34.9022
+ fixed20               20 Wasted + emergency units a year  sarima    630.9401              677.3719             7        7  0.0156      0.0156   -46.4319 -68.1978 -24.6659
+ fixed20               20 Wasted + emergency units a year   lasso    646.4308              677.3719             6        7  0.1250      0.1094   -30.9411 -66.8689   4.9866
+ fixed20               20 Wasted + emergency units a year     rnn    621.9352              677.3719             7        7  0.0156      0.0156   -55.4367 -74.2114 -36.6620
+ fixed50               50                  Waste (points)    hgbr      6.3449                6.4347             3        7  1.0000      0.9375    -0.0898  -0.6833   0.5037
+ fixed50               50                  Waste (points)    gbdt      7.2133                6.4347             1        7  0.1250      0.0312     0.7786   0.2592   1.2980
+ fixed50               50                  Waste (points) chronos      6.0650                6.4347             4        7  1.0000      0.2969    -0.3697  -0.8789   0.1395
+ fixed50               50                  Waste (points)  sarima      6.0640                6.4347             4        7  1.0000      0.4688    -0.3707  -0.9478   0.2065
+ fixed50               50                  Waste (points)   lasso      6.4531                6.4347             4        7  1.0000      0.9375     0.0184  -0.5281   0.5649
+ fixed50               50                  Waste (points)     rnn      5.9982                6.4347             6        7  0.1250      0.0781    -0.4365  -0.9581   0.0851
+ fixed50               50 Wasted + emergency units a year    hgbr    547.9013              572.5949             5        7  0.4531      0.1094   -24.6937 -50.4688   1.0815
+ fixed50               50 Wasted + emergency units a year    gbdt    582.8500              572.5949             3        7  1.0000      0.4688    10.2550 -10.6641  31.1742
+ fixed50               50 Wasted + emergency units a year chronos    538.7068              572.5949             7        7  0.0156      0.0156   -33.8881 -47.2196 -20.5566
+ fixed50               50 Wasted + emergency units a year  sarima    537.0604              572.5949             6        7  0.1250      0.0312   -35.5346 -56.7183 -14.3508
+ fixed50               50 Wasted + emergency units a year   lasso    551.0438              572.5949             6        7  0.1250      0.0781   -21.5511 -45.2442   2.1420
+ fixed50               50 Wasted + emergency units a year     rnn    535.5861              572.5949             7        7  0.0156      0.0156   -37.0088 -58.0426 -15.9751
+  model  sd_of_yearly_waste_gap  ci_half_width  approx_min_detectable_gap_80pct
+   hgbr                   1.020          0.943                            1.293
+   gbdt                   0.723          0.669                            0.916
+chronos                   0.871          0.805                            1.103
+ sarima                   0.829          0.766                            1.050
+  lasso                   0.897          0.829                            1.136
+    rnn                   0.783          0.724                            0.992

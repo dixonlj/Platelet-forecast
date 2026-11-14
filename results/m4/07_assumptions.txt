@@ -1,0 +1,9 @@
+demand_source: University Hospital Aachen daily platelet counts 2018 (public, CC BY 4.0).
+not_a_us_hospital: True
+us_group_share_source: Stanford Blood Center, Blood Types (https://stanfordbloodcenter.org/donate-blood/blood-donation-facts/blood-types/), opened 13 Nov 2026. Estimates attributed there to AABB Technical Manual, 18th Edition.
+us_group_share: {'O-': 0.066, 'O+': 0.374, 'A-': 0.063, 'A+': 0.357, 'B-': 0.015, 'B+': 0.085, 'AB-': 0.006, 'AB+': 0.034}
+shipping_assumption: The 2-day order lead already includes transit. Pathogen-reduced 5-day units are assumed to arrive with 4 usable days (released day 2). 7-day LVDS units are assumed to arrive with 5 usable days (released day 3). No extra shipping delay is added.
+rhdneg_female_le50_share_assumption: 15% of already RhD-negative demand is tagged as females aged 50 or under and cannot receive RhD-positive units. No source gives this share for platelet recipients; 0% and 30% are also run.
+window: 2018-01-08 to 2018-12-18
+target_shortage_days: 31
+hospital_waste_pct: 12.303008595988539

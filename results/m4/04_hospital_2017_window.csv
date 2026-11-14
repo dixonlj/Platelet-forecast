@@ -1,0 +1,2 @@
+window,demand,waste_units,short_units,shortage_days,waste_pct,shortage_pct,n_days,sigma
+2017-01-08 to 2017-12-18,5071,460,573,42,9.071189114573063,11.29954644054427,345,"{'naive': 10.743169398907105, 'last7': 7.730679156908665, 'same_dow': 8.44535519125683, 'dow4': 6.549863387978142, 'hgbr': 6.021924455286194}"

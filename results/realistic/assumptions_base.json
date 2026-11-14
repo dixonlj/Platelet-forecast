@@ -1,0 +1,274 @@
+{
+  "group_share": {
+    "O-": 0.06,
+    "O+": 0.35,
+    "A-": 0.06,
+    "A+": 0.37,
+    "B-": 0.02,
+    "B+": 0.09,
+    "AB-": 0.01,
+    "AB+": 0.04
+  },
+  "pooled": false,
+  "demand_split": "multinomial",
+  "episode_mean_units": 2.0,
+  "abo_mode": "guideline_plus_plasma",
+  "allow_rhpos_to_rhneg": true,
+  "shortfall_day_prob": 0.1,
+  "shortfall_fill_range": [
+    0.5,
+    0.9
+  ],
+  "life_on_arrival": {
+    "4": 0.7,
+    "3": 0.3
+  },
+  "safety_split": "sqrt",
+  "n_seeds": 30,
+  "k_grid": [
+    0.0,
+    0.25,
+    0.5,
+    0.75,
+    1.0,
+    1.25,
+    1.5,
+    1.75,
+    2.0,
+    2.25,
+    2.5,
+    2.75,
+    3.0,
+    3.25,
+    3.5,
+    3.75,
+    4.0,
+    4.25,
+    4.5,
+    4.75,
+    5.0,
+    5.25,
+    5.5,
+    5.75,
+    6.0
+  ],
+  "safety_unit_sigma": {
+    "naive": 12.162,
+    "last7": 8.711,
+    "same_dow": 8.833,
+    "dow4": 6.586,
+    "hgbr": 6.59,
+    "lasso": 6.092,
+    "rnn": 5.855
+  },
+  "substitution_lists": {
+    "0-": [
+      [
+        "A-",
+        "abo_plasma"
+      ],
+      [
+        "B-",
+        "abo_plasma"
+      ],
+      [
+        "AB-",
+        "abo_plasma"
+      ],
+      [
+        "0+",
+        "rhpos_to_rhneg"
+      ],
+      [
+        "A+",
+        "rhpos_to_rhneg"
+      ],
+      [
+        "B+",
+        "rhpos_to_rhneg"
+      ],
+      [
+        "AB+",
+        "rhpos_to_rhneg"
+      ]
+    ],
+    "0+": [
+      [
+        "0-",
+        "rhneg_to_rhpos"
+      ],
+      [
+        "A+",
+        "abo_plasma"
+      ],
+      [
+        "A-",
+        "abo_plasma"
+      ],
+      [
+        "B+",
+        "abo_plasma"
+      ],
+      [
+        "B-",
+        "abo_plasma"
+      ],
+      [
+        "AB+",
+        "abo_plasma"
+      ],
+      [
+        "AB-",
+        "abo_plasma"
+      ]
+    ],
+    "A-": [
+      [
+        "0-",
+        "abo_guideline"
+      ],
+      [
+        "AB-",
+        "abo_plasma"
+      ],
+      [
+        "A+",
+        "rhpos_to_rhneg"
+      ],
+      [
+        "0+",
+        "rhpos_to_rhneg"
+      ],
+      [
+        "AB+",
+        "rhpos_to_rhneg"
+      ]
+    ],
+    "A+": [
+      [
+        "A-",
+        "rhneg_to_rhpos"
+      ],
+      [
+        "0+",
+        "abo_guideline"
+      ],
+      [
+        "0-",
+        "abo_guideline"
+      ],
+      [
+        "AB+",
+        "abo_plasma"
+      ],
+      [
+        "AB-",
+        "abo_plasma"
+      ]
+    ],
+    "B-": [
+      [
+        "0-",
+        "abo_guideline"
+      ],
+      [
+        "AB-",
+        "abo_plasma"
+      ],
+      [
+        "B+",
+        "rhpos_to_rhneg"
+      ],
+      [
+        "0+",
+        "rhpos_to_rhneg"
+      ],
+      [
+        "AB+",
+        "rhpos_to_rhneg"
+      ]
+    ],
+    "B+": [
+      [
+        "B-",
+        "rhneg_to_rhpos"
+      ],
+      [
+        "0+",
+        "abo_guideline"
+      ],
+      [
+        "0-",
+        "abo_guideline"
+      ],
+      [
+        "AB+",
+        "abo_plasma"
+      ],
+      [
+        "AB-",
+        "abo_plasma"
+      ]
+    ],
+    "AB-": [
+      [
+        "A-",
+        "abo_guideline"
+      ],
+      [
+        "B-",
+        "abo_guideline"
+      ],
+      [
+        "0-",
+        "abo_guideline"
+      ],
+      [
+        "AB+",
+        "rhpos_to_rhneg"
+      ],
+      [
+        "A+",
+        "rhpos_to_rhneg"
+      ],
+      [
+        "B+",
+        "rhpos_to_rhneg"
+      ],
+      [
+        "0+",
+        "rhpos_to_rhneg"
+      ]
+    ],
+    "AB+": [
+      [
+        "AB-",
+        "rhneg_to_rhpos"
+      ],
+      [
+        "A+",
+        "abo_guideline"
+      ],
+      [
+        "A-",
+        "abo_guideline"
+      ],
+      [
+        "B+",
+        "abo_guideline"
+      ],
+      [
+        "B-",
+        "abo_guideline"
+      ],
+      [
+        "0+",
+        "abo_guideline"
+      ],
+      [
+        "0-",
+        "abo_guideline"
+      ]
+    ]
+  }
+}

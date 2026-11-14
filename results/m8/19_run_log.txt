@@ -1,0 +1,74 @@
+=== Milestone 8 step 1: cushion multiplier k chosen in Y-1, applied unchanged in Y ===
+check: matched point vs scripts 08/13 max |waste diff| = 0.00e+00 (42 rows)
+k_prior_year:
+model  dow4  hgbr  chronos  sarima  lasso   rnn
+year                                           
+2012   0.65  0.95     0.84    0.86   0.81  0.84
+2013   0.66  0.85     0.82    0.77   0.90  0.84
+2014   0.78  0.98     0.88    0.83   0.89  0.79
+2015   0.98  0.93     1.03    0.87   0.70  0.65
+2016   0.67  0.87     0.94    0.91   0.80  0.91
+2017   0.69  0.77     0.85    0.71   0.73  0.58
+2018   0.63  0.90     0.81    0.80   0.77  0.92
+mean: {'dow4': 0.72, 'hgbr': 0.89, 'chronos': 0.88, 'sarima': 0.82, 'lasso': 0.8, 'rnn': 0.79}
+k_matched_test_year:
+model  dow4  hgbr  chronos  sarima  lasso   rnn
+year                                           
+2012   0.73  0.68     0.98    0.90   1.00  0.94
+2013   0.71  0.86     0.78    0.77   0.81  0.72
+2014   1.03  0.88     1.09    0.92   0.83  0.70
+2015   0.76  0.99     1.12    1.03   0.84  0.99
+2016   0.70  0.79     0.83    0.72   0.75  0.56
+2017   0.62  0.99     0.89    0.81   0.78  0.90
+2018   0.93  0.97     0.93    0.97   1.07  1.20
+mean: {'dow4': 0.78, 'hgbr': 0.88, 'chronos': 0.95, 'sarima': 0.87, 'lasso': 0.87, 'rnn': 0.86}
+short_days_mean:
+model   dow4   hgbr  chronos  sarima  lasso    rnn
+year                                              
+2012   45.37  20.28    49.12   42.88  53.79  48.09
+2013   34.24  31.71    28.88   30.11  27.09  25.63
+2014   31.99  17.66    32.16   24.94  19.19  16.44
+2015   27.64  40.80    43.31   45.73  44.28  55.22
+2016   35.99  31.05    28.22   25.98  32.39  21.74
+2017   37.81  55.49    44.31   47.86  44.45  57.66
+2018   49.98  37.02    38.90   41.13  54.03  49.17
+mean: {'dow4': 37.57, 'hgbr': 33.43, 'chronos': 37.84, 'sarima': 36.95, 'lasso': 39.32, 'rnn': 39.13}
+waste_pct_mean:
+model   dow4   hgbr  chronos  sarima  lasso    rnn
+year                                              
+2012    7.77  13.26     6.44    7.04   5.86   6.75
+2013    7.16   7.15     7.60    7.77   8.30   8.44
+2014   10.35  13.47     9.40   10.71  13.65  13.45
+2015    9.50   7.43     6.93    6.58   7.40   5.44
+2016    9.68  10.50    11.52   11.93  10.67  12.95
+2017    7.41   5.79     6.70    6.25   7.35   4.60
+2018    5.74   6.11     5.77    5.62   5.07   4.32
+mean: {'dow4': 8.23, 'hgbr': 9.1, 'chronos': 7.77, 'sarima': 7.98, 'lasso': 8.33, 'rnn': 7.99}
+emergency_units_mean:
+model    dow4    hgbr  chronos  sarima   lasso     rnn
+year                                                  
+2012   246.26  125.01   255.68  211.84  275.72  235.86
+2013   161.06  144.10   138.73  141.87  115.66  121.63
+2014   141.30   83.25   149.74  121.67   88.91   68.55
+2015   172.59  200.58   217.44  236.56  226.76  308.95
+2016   212.25  140.24   128.11  118.62  149.18   91.54
+2017   237.81  328.37   256.91  272.62  261.13  367.06
+2018   294.22  225.75   229.78  238.64  286.15  295.39
+mean: {'dow4': 209.36, 'hgbr': 178.18, 'chronos': 196.63, 'sarima': 191.69, 'lasso': 200.5, 'rnn': 212.71}
+wasted_plus_emergency_mean:
+model    dow4    hgbr  chronos  sarima   lasso     rnn
+year                                                  
+2012   571.89  680.62   525.65  506.57  521.36  518.46
+2013   485.10  467.75   482.71  493.59  490.97  503.56
+2014   538.29  599.93   510.41  532.34  612.35  584.42
+2015   635.11  562.17   554.91  556.72  587.14  573.90
+2016   627.68  590.86   622.25  630.63  607.01  647.07
+2017   613.75  622.09   596.90  589.40  633.98  600.45
+2018   614.49  566.87   552.17  552.31  569.28  536.35
+mean: {'dow4': 583.76, 'hgbr': 584.33, 'chronos': 549.29, 'sarima': 551.65, 'lasso': 574.58, 'rnn': 566.32}
+hgbr: fewer lost than WA in 4/7 (mean gap 0.6); less waste in 3/7 (mean gap 0.87 pts); fewer short days in 5/7 (mean gap -4.1)
+chronos: fewer lost than WA in 7/7 (mean gap -34.5); less waste in 4/7 (mean gap -0.46 pts); fewer short days in 3/7 (mean gap 0.3)
+sarima: fewer lost than WA in 5/7 (mean gap -32.1); less waste in 4/7 (mean gap -0.25 pts); fewer short days in 5/7 (mean gap -0.6)
+lasso: fewer lost than WA in 4/7 (mean gap -9.2); less waste in 4/7 (mean gap 0.10 pts); fewer short days in 3/7 (mean gap 1.7)
+rnn: fewer lost than WA in 4/7 (mean gap -17.4); less waste in 4/7 (mean gap -0.24 pts); fewer short days in 4/7 (mean gap 1.6)
+hospital short days: {2012: 40, 2013: 31, 2014: 21, 2015: 38, 2016: 35, 2017: 42, 2018: 31}

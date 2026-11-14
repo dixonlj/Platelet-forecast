@@ -1,0 +1,163 @@
+=== Milestone 5 step 1: multi-year inventory test 2012-2018 ===
+Matched to each year's hospital short days; 30 paired seeds; German-rules realistic sim.
+Waste % (mean of 30 seeds):
+year       2012   2013   2014   2015   2016   2017   2018
+model                                                    
+chronos    7.66   7.23  11.96   7.62  10.32   7.08   6.88
+dow4       8.57   7.63  13.78   7.39   9.96   6.86   8.32
+hgbr       8.97   7.25  11.91   7.88   9.57   7.63   6.78
+lasso      7.48   7.48  12.91   8.48  10.15   7.78   7.36
+last7     12.10  13.32  18.96  13.25  17.03  14.08  12.61
+naive     20.39  24.01  33.38  27.27  29.38  23.52  22.84
+rnn        7.86   7.58  12.14   7.62   8.97   6.77   6.60
+same_dow  10.52   9.26  16.26  10.07  13.99  10.93   9.56
+Emergency units (mean):
+year       2012   2013   2014   2015   2016   2017   2018
+model                                                    
+chronos   205.3  148.8  104.1  193.5  163.8  242.2  189.4
+dow4      215.1  143.6   90.0  228.2  204.2  264.5  173.6
+hgbr      216.6  141.3   97.2  185.9  162.7  236.6  192.3
+lasso     210.0  132.6   98.2  186.6  163.1  246.8  160.3
+last7     194.9  125.7  108.8  187.2  150.3  262.7  173.1
+naive     278.9  164.5  119.3  255.2  206.9  299.5  240.6
+rnn       193.1  146.9   86.6  188.6  170.9  244.1  194.2
+same_dow  230.9  162.8  100.7  238.6  195.7  279.0  180.9
+Wasted + emergency units (mean):
+year        2012    2013    2014    2015    2016    2017    2018
+model                                                           
+chronos    526.1   476.0   563.0   564.2   606.5   601.0   573.7
+dow4       573.9   488.9   618.5   587.9   631.5   612.1   638.0
+hgbr       592.5   469.3   554.1   569.4   573.1   623.4   571.0
+lasso      523.4   471.1   593.6   599.3   598.6   641.3   571.6
+last7      701.8   728.1   836.0   832.2   880.8   976.8   877.0
+naive     1133.1  1251.0  1399.7  1582.6  1467.3  1492.3  1516.1
+rnn        522.3   489.9   552.3   559.6   555.7   587.6   562.6
+same_dow   671.8   581.7   724.5   728.9   795.8   833.3   714.9
+Wins (years with lowest mean):
+  target                     metric           scope  winner  years_won
+ fixed20             waste_pct_mean      all_models chronos          1
+ fixed20             waste_pct_mean      all_models    hgbr          2
+ fixed20             waste_pct_mean      all_models   lasso          1
+ fixed20             waste_pct_mean      all_models     rnn          3
+ fixed20             waste_pct_mean dow4_vs_chronos chronos          7
+ fixed20             waste_pct_mean    dow4_vs_hgbr    dow4          1
+ fixed20             waste_pct_mean    dow4_vs_hgbr    hgbr          6
+ fixed20             waste_pct_mean hgbr_vs_chronos chronos          5
+ fixed20             waste_pct_mean hgbr_vs_chronos    hgbr          2
+ fixed20             waste_pct_mean    study_models chronos          5
+ fixed20             waste_pct_mean    study_models    hgbr          2
+ fixed20 wasted_plus_emergency_mean      all_models    hgbr          2
+ fixed20 wasted_plus_emergency_mean      all_models   lasso          1
+ fixed20 wasted_plus_emergency_mean      all_models     rnn          4
+ fixed20 wasted_plus_emergency_mean dow4_vs_chronos chronos          7
+ fixed20 wasted_plus_emergency_mean    dow4_vs_hgbr    dow4          1
+ fixed20 wasted_plus_emergency_mean    dow4_vs_hgbr    hgbr          6
+ fixed20 wasted_plus_emergency_mean hgbr_vs_chronos chronos          4
+ fixed20 wasted_plus_emergency_mean hgbr_vs_chronos    hgbr          3
+ fixed20 wasted_plus_emergency_mean    study_models chronos          4
+ fixed20 wasted_plus_emergency_mean    study_models    hgbr          3
+ fixed50             waste_pct_mean      all_models chronos          1
+ fixed50             waste_pct_mean      all_models    dow4          1
+ fixed50             waste_pct_mean      all_models    hgbr          1
+ fixed50             waste_pct_mean      all_models   lasso          1
+ fixed50             waste_pct_mean      all_models     rnn          3
+ fixed50             waste_pct_mean dow4_vs_chronos chronos          4
+ fixed50             waste_pct_mean dow4_vs_chronos    dow4          3
+ fixed50             waste_pct_mean    dow4_vs_hgbr    dow4          4
+ fixed50             waste_pct_mean    dow4_vs_hgbr    hgbr          3
+ fixed50             waste_pct_mean hgbr_vs_chronos chronos          5
+ fixed50             waste_pct_mean hgbr_vs_chronos    hgbr          2
+ fixed50             waste_pct_mean    study_models chronos          3
+ fixed50             waste_pct_mean    study_models    dow4          3
+ fixed50             waste_pct_mean    study_models    hgbr          1
+ fixed50 wasted_plus_emergency_mean      all_models    hgbr          3
+ fixed50 wasted_plus_emergency_mean      all_models   lasso          1
+ fixed50 wasted_plus_emergency_mean      all_models     rnn          3
+ fixed50 wasted_plus_emergency_mean dow4_vs_chronos chronos          7
+ fixed50 wasted_plus_emergency_mean    dow4_vs_hgbr    dow4          2
+ fixed50 wasted_plus_emergency_mean    dow4_vs_hgbr    hgbr          5
+ fixed50 wasted_plus_emergency_mean hgbr_vs_chronos chronos          4
+ fixed50 wasted_plus_emergency_mean hgbr_vs_chronos    hgbr          3
+ fixed50 wasted_plus_emergency_mean    study_models chronos          4
+ fixed50 wasted_plus_emergency_mean    study_models    hgbr          3
+hospital             waste_pct_mean      all_models chronos          1
+hospital             waste_pct_mean      all_models    dow4          1
+hospital             waste_pct_mean      all_models    hgbr          1
+hospital             waste_pct_mean      all_models   lasso          1
+hospital             waste_pct_mean      all_models     rnn          3
+hospital             waste_pct_mean dow4_vs_chronos chronos          4
+hospital             waste_pct_mean dow4_vs_chronos    dow4          3
+hospital             waste_pct_mean    dow4_vs_hgbr    dow4          3
+hospital             waste_pct_mean    dow4_vs_hgbr    hgbr          4
+hospital             waste_pct_mean hgbr_vs_chronos chronos          4
+hospital             waste_pct_mean hgbr_vs_chronos    hgbr          3
+hospital             waste_pct_mean    study_models chronos          2
+hospital             waste_pct_mean    study_models    dow4          2
+hospital             waste_pct_mean    study_models    hgbr          3
+hospital wasted_plus_emergency_mean      all_models    hgbr          1
+hospital wasted_plus_emergency_mean      all_models     rnn          6
+hospital wasted_plus_emergency_mean dow4_vs_chronos chronos          7
+hospital wasted_plus_emergency_mean    dow4_vs_hgbr    dow4          2
+hospital wasted_plus_emergency_mean    dow4_vs_hgbr    hgbr          5
+hospital wasted_plus_emergency_mean hgbr_vs_chronos chronos          3
+hospital wasted_plus_emergency_mean hgbr_vs_chronos    hgbr          4
+hospital wasted_plus_emergency_mean    study_models chronos          3
+hospital wasted_plus_emergency_mean    study_models    hgbr          4
+Accuracy:
+ year              model    mae_1d   dm_stat     dm_p
+ 2012              naive  5.754098       NaN      NaN
+ 2012              last7  4.382904       NaN      NaN
+ 2012           same_dow  4.803279       NaN      NaN
+ 2012               dow4  4.037568       NaN      NaN
+ 2012               hgbr  3.954805       NaN      NaN
+ 2012            chronos  3.727052       NaN      NaN
+ 2012    DM_hgbr_vs_dow4 -0.082763 -0.452713 0.650755
+ 2012 DM_chronos_vs_dow4 -0.310517 -2.851837 0.004347
+ 2013              naive  5.802740       NaN      NaN
+ 2013              last7  4.540117       NaN      NaN
+ 2013           same_dow  4.619178       NaN      NaN
+ 2013               dow4  3.992466       NaN      NaN
+ 2013               hgbr  3.726409       NaN      NaN
+ 2013            chronos  3.542729       NaN      NaN
+ 2013    DM_hgbr_vs_dow4 -0.266057 -1.841247 0.065585
+ 2013 DM_chronos_vs_dow4 -0.449737 -3.579252 0.000345
+ 2014              naive  5.290411       NaN      NaN
+ 2014              last7  4.345597       NaN      NaN
+ 2014           same_dow  4.709589       NaN      NaN
+ 2014               dow4  3.830822       NaN      NaN
+ 2014               hgbr  3.365973       NaN      NaN
+ 2014            chronos  3.488934       NaN      NaN
+ 2014    DM_hgbr_vs_dow4 -0.464849 -3.571496 0.000355
+ 2014 DM_chronos_vs_dow4 -0.341888 -2.912890 0.003581
+ 2015              naive  6.624658       NaN      NaN
+ 2015              last7  5.237182       NaN      NaN
+ 2015           same_dow  5.364384       NaN      NaN
+ 2015               dow4  4.513014       NaN      NaN
+ 2015               hgbr  3.975931       NaN      NaN
+ 2015            chronos  4.138078       NaN      NaN
+ 2015    DM_hgbr_vs_dow4 -0.537083 -3.589193 0.000332
+ 2015 DM_chronos_vs_dow4 -0.374936 -2.919765 0.003503
+ 2016              naive  5.696721       NaN      NaN
+ 2016              last7  4.802888       NaN      NaN
+ 2016           same_dow  5.344262       NaN      NaN
+ 2016               dow4  4.223361       NaN      NaN
+ 2016               hgbr  3.826406       NaN      NaN
+ 2016            chronos  3.923330       NaN      NaN
+ 2016    DM_hgbr_vs_dow4 -0.396955 -3.220726 0.001279
+ 2016 DM_chronos_vs_dow4 -0.300031 -2.505905 0.012214
+ 2017              naive  6.000000       NaN      NaN
+ 2017              last7  5.252446       NaN      NaN
+ 2017           same_dow  5.619178       NaN      NaN
+ 2017               dow4  4.210274       NaN      NaN
+ 2017               hgbr  4.148310       NaN      NaN
+ 2017            chronos  4.006088       NaN      NaN
+ 2017    DM_hgbr_vs_dow4 -0.061964 -0.385675 0.699738
+ 2017 DM_chronos_vs_dow4 -0.204186 -1.695051 0.090066
+ 2018              naive  6.147945       NaN      NaN
+ 2018              last7  5.221526       NaN      NaN
+ 2018           same_dow  5.304110       NaN      NaN
+ 2018               dow4  4.360274       NaN      NaN
+ 2018               hgbr  3.973525       NaN      NaN
+ 2018            chronos  3.905058       NaN      NaN
+ 2018    DM_hgbr_vs_dow4 -0.386749 -2.109240 0.034924
+ 2018 DM_chronos_vs_dow4 -0.455216 -3.117018 0.001827

@@ -1,0 +1,30 @@
+=== Milestone 9 step 3: day-by-day cushion diagnosis (2017, 2018) ===
+2017: share of 2-day windows where q90 < q50 before clipping = 0.000; share of Thursday 4-day windows clipped = 0.000
+2017: spread index equals forecast origin index: True; missing spread on scored order days: 0
+2017: reproduces script 05: fixed 7.6034 vs 7.6034; day-by-day 13.1786 vs 13.1786
+2018: share of 2-day windows where q90 < q50 before clipping = 0.000; share of Thursday 4-day windows clipped = 0.000
+2018: spread index equals forecast origin index: True; missing spread on scored order days: 0
+2018: reproduces script 05: fixed 8.3774 vs 8.3774; day-by-day 13.5721 vs 13.5721
+Cushion units:
+ year       order_type  fixed_unit  band_mean  band_cv  band_over_fixed  share_actual_above_q90_window  share_actual_above_q50_window
+ 2017  Sun-Wed (2-day)       6.068     15.358    0.197            2.531                          0.152                          0.742
+ 2017 Thursday (4-day)       6.068     26.947    0.156            4.441                          0.082                          0.694
+ 2018  Sun-Wed (2-day)       7.113     11.816    0.245            1.661                          0.227                          0.687
+ 2018 Thursday (4-day)       7.113     18.945    0.211            2.664                          0.122                          0.776
+Matched results:
+ year                                        variant  target_short_days  waste_pct_mean  mean_end_stock  k_matched_mean  n_seeds_matched  max_grid_k_used  mean_cushion_sun_wed_units  mean_cushion_thursday_units
+ 2017                                  fixed cushion                 42           7.603          14.426           1.079               30             1.25                       6.544                        6.544
+ 2017                 day-by-day cushion (script 05)                 42          13.179          17.864           0.417               30             0.50                       6.405                       11.237
+ 2017 day-by-day shape, fixed-rule size (diagnostic)                 42           8.216          14.925           1.131               30             1.25                       6.862                        6.862
+ 2018                                  fixed cushion                 31           8.377          16.754           1.055               30             1.25                       7.503                        7.503
+ 2018                 day-by-day cushion (script 05)                 31          13.572          20.026           0.637               30             0.75                       7.521                       12.060
+ 2018 day-by-day shape, fixed-rule size (diagnostic)                 31           8.863          17.148           1.086               30             1.50                       7.726                        7.726
+Waste share by weekday:
+dow                                                    Mon    Tue  Wed    Thu    Fri    Sat    Sun
+year variant                                                                                      
+2017 day-by-day cushion (script 05)                  0.433  0.271  0.0  0.008  0.033  0.091  0.164
+     day-by-day shape, fixed-rule size (diagnostic)  0.350  0.144  0.0  0.037  0.089  0.137  0.243
+     fixed cushion                                   0.366  0.146  0.0  0.038  0.080  0.126  0.244
+2018 day-by-day cushion (script 05)                  0.415  0.307  0.0  0.013  0.040  0.091  0.136
+     day-by-day shape, fixed-rule size (diagnostic)  0.346  0.211  0.0  0.049  0.093  0.126  0.176
+     fixed cushion                                   0.357  0.215  0.0  0.054  0.092  0.108  0.173

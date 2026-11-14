@@ -1,0 +1,6 @@
+model,holdout_mae,holdout_wape,holdout_mape,cv_mae,cv_wape,units_expired,wastage_rate_pct,shortage_days,units_short,safety_stock,n_days
+Naive (yesterday),8.328,44.614,58.385,8.845,48.932,96,2.764,0,0,13.651,183
+Last-7-day average,7.266,38.926,65.073,7.430,41.115,0,0.000,2,17,11.302,183
+Same weekday last week,9.055,48.507,74.255,8.111,44.850,48,1.404,2,7,12.331,183
+4-week weekday average,6.480,34.712,55.529,6.457,35.679,6,0.178,1,5,9.868,183
+Gradient boosting,5.454,29.216,44.224,6.940,38.485,0,0.000,1,10,6.989,183

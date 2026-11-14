@@ -1,0 +1,33 @@
+=== Milestone 8 step 3: 7-year comparison under other assumptions ===
+base-case check vs scripts 08/13: max |waste diff| = 0.00e+00 (42 rows)
+                                     scenario   model  mean_waste_pct  mean_lost_units  years_less_waste_than_wa  mean_waste_gap_pts  years_fewer_lost_than_wa  mean_lost_gap_units  min_seeds_matched
+          Base case (as in the main analysis)    dow4            8.93           592.97                       NaN                 NaN                       NaN                  NaN                 30
+          Base case (as in the main analysis)    hgbr            8.57           564.67                       4.0               -0.36                       5.0               -28.30                 30
+          Base case (as in the main analysis) chronos            8.39           558.65                       4.0               -0.54                       7.0               -34.32                 30
+          Base case (as in the main analysis)  sarima            8.38           556.17                       4.0               -0.55                       6.0               -36.79                 30
+          Base case (as in the main analysis)   lasso            8.81           571.26                       4.0               -0.12                       5.0               -21.71                 30
+          Base case (as in the main analysis)     rnn            8.22           547.14                       6.0               -0.71                       6.0               -45.82                 30
+               No blood groups (pooled stock)    dow4            6.19           494.96                       NaN                 NaN                       NaN                  NaN                 30
+               No blood groups (pooled stock)    hgbr            5.54           448.78                       6.0               -0.64                       7.0               -46.18                 30
+               No blood groups (pooled stock) chronos            5.36           439.36                       7.0               -0.82                       7.0               -55.59                 30
+               No blood groups (pooled stock)  sarima            5.55           447.98                       5.0               -0.64                       7.0               -46.98                 30
+               No blood groups (pooled stock)   lasso            6.38           492.35                       2.0                0.19                       5.0                -2.61                 30
+               No blood groups (pooled stock)     rnn            5.50           443.35                       6.0               -0.69                       7.0               -51.61                 30
+               Patient episodes, mean 2 units    dow4           10.96           680.09                       NaN                 NaN                       NaN                  NaN                 30
+               Patient episodes, mean 2 units    hgbr           10.58           653.77                       5.0               -0.38                       5.0               -26.31                 30
+               Patient episodes, mean 2 units chronos           10.38           647.08                       6.0               -0.58                       6.0               -33.01                 30
+               Patient episodes, mean 2 units  sarima           10.51           649.90                       5.0               -0.45                       5.0               -30.19                 30
+               Patient episodes, mean 2 units   lasso           10.77           657.54                       3.0               -0.19                       6.0               -22.55                 30
+               Patient episodes, mean 2 units     rnn           10.19           635.38                       6.0               -0.78                       7.0               -44.71                 30
+Heavy shortfalls (25% of days, 30-80% filled)    dow4           11.74           742.51                       NaN                 NaN                       NaN                  NaN                 30
+Heavy shortfalls (25% of days, 30-80% filled)    hgbr           11.20           718.22                       7.0               -0.54                       6.0               -24.29                 30
+Heavy shortfalls (25% of days, 30-80% filled) chronos           11.03           707.63                       7.0               -0.71                       7.0               -34.88                 30
+Heavy shortfalls (25% of days, 30-80% filled)  sarima           11.08           705.97                       7.0               -0.65                       7.0               -36.54                 30
+Heavy shortfalls (25% of days, 30-80% filled)   lasso           11.43           719.86                       5.0               -0.31                       6.0               -22.65                 30
+Heavy shortfalls (25% of days, 30-80% filled)     rnn           10.94           702.78                       7.0               -0.79                       7.0               -39.74                 30
+    43% arrive with 3 days (calibrated share)    dow4           10.21           651.42                       NaN                 NaN                       NaN                  NaN                 30
+    43% arrive with 3 days (calibrated share)    hgbr            9.87           623.12                       4.0               -0.35                       5.0               -28.30                 30
+    43% arrive with 3 days (calibrated share) chronos            9.65           616.16                       4.0               -0.57                       7.0               -35.26                 30
+    43% arrive with 3 days (calibrated share)  sarima            9.70           617.10                       4.0               -0.51                       6.0               -34.31                 30
+    43% arrive with 3 days (calibrated share)   lasso           10.29           638.59                       3.0                0.07                       5.0               -12.83                 30
+    43% arrive with 3 days (calibrated share)     rnn            9.43           601.60                       5.0               -0.78                       6.0               -49.82                 30

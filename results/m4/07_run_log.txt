@@ -1,0 +1,39 @@
+=== Step 4: US rules on Aachen demand (not a US hospital) ===
+Window: 2018-01-08 to 2018-12-18
+Hospital actual: 12.30% wasted, 31 short days.
+US group shares: Stanford Blood Center, Blood Types (https://stanfordbloodcenter.org/donate-blood/blood-donation-facts/blood-types/), opened 13 Nov 2026. Estimates attributed there to AABB Technical Manual, 18th Edition.
+Shipping assumption: The 2-day order lead already includes transit. Pathogen-reduced 5-day units are assumed to arrive with 4 usable days (released day 2). 7-day LVDS units are assumed to arrive with 5 usable days (released day 3). No extra shipping delay is added.
+Females <=50 assumption: 15% of already RhD-negative demand is tagged as females aged 50 or under and cannot receive RhD-positive units. No source gives this share for platelet recipients; 0% and 30% are also run.
+model  target_shortage_days  waste_mean  waste_sd  waste_p05  waste_p95  n_seeds   k_mean                                  scenario              abo_mode  prot_share life
+ dow4                    31    8.315433  0.675313   7.432611   9.564112       30 0.932259                German rules (current sim) guideline_plus_plasma        0.00  3,4
+ hgbr                    31    6.780979  0.641236   6.088825   7.922815       30 0.970480                German rules (current sim) guideline_plus_plasma        0.00  3,4
+ dow4                    31    3.640254  0.361776   3.115620   4.285906       30 0.825859               US, plasma-first, 50/50 mix       us_plasma_first        0.15  4,5
+ hgbr                    31    3.026668  0.281686   2.568214   3.519313       30 0.885766               US, plasma-first, 50/50 mix       us_plasma_first        0.15  4,5
+ dow4                    31    0.465045  0.139362   0.276596   0.704903       30 0.789914          US, oldest-unit-first, 50/50 mix          fifo_any_abo        0.15  4,5
+ hgbr                    31    0.359453  0.120231   0.152988   0.545532       30 0.860562          US, oldest-unit-first, 50/50 mix          fifo_any_abo        0.15  4,5
+ dow4                    31    5.255531  0.385897   4.727105   5.826744       30 0.853805               US, plasma-first, all 5-day       us_plasma_first        0.15    4
+ hgbr                    31    4.293509  0.344485   3.853933   4.746672       30 0.914682               US, plasma-first, all 5-day       us_plasma_first        0.15    4
+ dow4                    31    2.086402  0.238131   1.626074   2.402586       30 0.801502               US, plasma-first, all 7-day       us_plasma_first        0.15    5
+ hgbr                    31    1.815347  0.216966   1.497202   2.083287       30 0.866918               US, plasma-first, all 7-day       us_plasma_first        0.15    5
+ dow4                    31    3.574801  0.358745   3.027937   4.212818       30 0.811859  US, plasma-first, 50/50, 0% females <=50       us_plasma_first        0.00  4,5
+ hgbr                    31    2.993273  0.299091   2.546843   3.508686       30 0.874088  US, plasma-first, 50/50, 0% females <=50       us_plasma_first        0.00  4,5
+ dow4                    31    3.721648  0.368753   3.210078   4.352907       30 0.845471 US, plasma-first, 50/50, 30% females <=50       us_plasma_first        0.30  4,5
+ hgbr                    31    3.095059  0.283263   2.595610   3.535100       30 0.903392 US, plasma-first, 50/50, 30% females <=50       us_plasma_first        0.30  4,5
+
+Gradient boosting, German vs US base (50/50, plasma-first):
+  German 6.78%  US plasma-first 3.03%  US oldest-first 0.36%
+  gaps vs German: plasma-first -3.75 pp, oldest-first -6.42 pp
+
+Shelf-life scenarios (GB, US plasma-first):
+model  target_shortage_days  waste_mean  waste_sd  waste_p05  waste_p95  n_seeds   k_mean                    scenario        abo_mode  prot_share life
+ hgbr                    31    3.026668  0.281686   2.568214   3.519313       30 0.885766 US, plasma-first, 50/50 mix us_plasma_first        0.15  4,5
+ hgbr                    31    4.293509  0.344485   3.853933   4.746672       30 0.914682 US, plasma-first, all 5-day us_plasma_first        0.15    4
+ hgbr                    31    1.815347  0.216966   1.497202   2.083287       30 0.866918 US, plasma-first, all 7-day us_plasma_first        0.15    5
+
+Sensitivity to the females<=50 share (GB, US plasma-first, 50/50):
+model  target_shortage_days  waste_mean  waste_sd  waste_p05  waste_p95  n_seeds   k_mean                                  scenario        abo_mode  prot_share life
+ hgbr                    31    3.026668  0.281686   2.568214   3.519313       30 0.885766               US, plasma-first, 50/50 mix us_plasma_first        0.15  4,5
+ hgbr                    31    2.993273  0.299091   2.546843   3.508686       30 0.874088  US, plasma-first, 50/50, 0% females <=50 us_plasma_first        0.00  4,5
+ hgbr                    31    3.095059  0.283263   2.595610   3.535100       30 0.903392 US, plasma-first, 50/50, 30% females <=50 us_plasma_first        0.30  4,5
+Chart: charts/m4_us_rules.png
+Trackio: logged locally to results/m4/trackio (project platelet-forecast-m4 / 07_us_rules_sim)

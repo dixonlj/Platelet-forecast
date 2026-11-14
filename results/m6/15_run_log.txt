@@ -1,0 +1,30 @@
+=== Milestone 6: life-on-arrival sweep ===
+A. Standing order, mean over 2012-2018:
+            sim_waste_pct  hosp_waste_pct  sim_emergency_units  hosp_emergency_units
+share_3day                                                                          
+0.0                  6.10            9.71               178.40                299.86
+0.1                  6.87            9.71               177.44                299.86
+0.2                  7.66            9.71               177.63                299.86
+0.3                  8.48            9.71               177.37                299.86
+0.4                  9.42            9.71               175.60                299.86
+0.5                 10.36            9.71               175.22                299.86
+0.6                 11.32            9.71               175.46                299.86
+0.7                 12.41            9.71               175.02                299.86
+0.8                 13.40            9.71               175.82                299.86
+0.9                 14.53            9.71               176.74                299.86
+1.0                 15.86            9.71               176.47                299.86
+Share of 3-day units that matches the mean recorded waste (9.71%): 43%
+ year  hosp_waste_pct  sim_waste_0pct  sim_waste_100pct                          matching_share_3day
+ 2012            7.62            5.90             14.18                                          25%
+ 2013            6.45            4.99             15.64                                          20%
+ 2014           11.03            9.96             25.25                                          10%
+ 2015            8.57            4.57             13.69                                          51%
+ 2016           12.91            7.82             16.89                                          60%
+ 2017            9.07            4.38             13.31                                          53%
+ 2018           12.30            5.11             12.07 above 100% (needs units younger than 3 days)
+
+B. Forecast comparison:
+share 3-day 0%: mean waste {'chronos': 5.92, 'dow4': 6.49, 'hgbr': 6.05, 'sarima': 5.83}; GB<WA 4/7, SARIMA<WA 6/7, CB<WA 5/7; lost units mean {'chronos': 445.0, 'dow4': 481.0, 'hgbr': 453.0, 'sarima': 441.0}; lost GB<WA 5/7, SARIMA<WA 7/7, CB<WA 7/7
+share 3-day 30%: mean waste {'chronos': 8.39, 'dow4': 8.93, 'hgbr': 8.57, 'sarima': 8.38}; GB<WA 4/7, SARIMA<WA 4/7, CB<WA 4/7; lost units mean {'chronos': 559.0, 'dow4': 593.0, 'hgbr': 565.0, 'sarima': 556.0}; lost GB<WA 5/7, SARIMA<WA 6/7, CB<WA 7/7
+share 3-day 60%: mean waste {'chronos': 11.36, 'dow4': 11.94, 'hgbr': 11.58, 'sarima': 11.48}; GB<WA 5/7, SARIMA<WA 4/7, CB<WA 4/7; lost units mean {'chronos': 697.0, 'dow4': 732.0, 'hgbr': 704.0, 'sarima': 702.0}; lost GB<WA 5/7, SARIMA<WA 6/7, CB<WA 7/7
+share 3-day 100%: mean waste {'chronos': 16.27, 'dow4': 16.93, 'hgbr': 16.44, 'sarima': 16.66}; GB<WA 5/7, SARIMA<WA 4/7, CB<WA 3/7; lost units mean {'chronos': 925.0, 'dow4': 964.0, 'hgbr': 926.0, 'sarima': 944.0}; lost GB<WA 5/7, SARIMA<WA 5/7, CB<WA 6/7

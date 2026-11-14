@@ -1,0 +1,28 @@
+=== Step 1: second test year 2017 ===
+Scoring window: 2017-01-08 to 2017-12-18
+Hospital actual: 9.07% wasted, 42 short days, 5071 units transfused.
+Average miss per day (units), 2017:
+  Use yesterday                 6.01
+  Last-7-day average            5.26
+  Same weekday last week        5.62
+  4-week weekday average        4.20
+  Gradient boosting             4.16
+  Authors' LASSO (ref.)         n/a (authors published 2- and 4-day totals only)
+  Authors' RNN (ref.)           n/a (authors published 2- and 4-day totals only)
+Safety-stock unit (2016 2-day average miss): naive=10.74, last7=7.73, same_dow=8.45, dow4=6.55, hgbr=6.02
+Waste at 42 short days (mean of 30 seeds):
+   model  target_shortage_days  waste_mean  waste_sd  waste_p05  waste_p95  n_seeds   k_mean
+   naive                    42   23.522606  1.537894  21.240633  26.091334       30 0.656593
+   last7                    42   14.081943  0.896597  12.627490  15.429926       30 0.854679
+same_dow                    42   10.930767  0.650951   9.856155  11.869181       30 0.690789
+    dow4                    42    6.855494  0.531951   5.963762   7.729872       30 0.624209
+    hgbr                    42    7.628016  0.601816   6.710314   8.566832       30 0.993377
+   model  diff_vs_dow4_mean  diff_sd  n  n_better  share_better
+   naive          16.667112 1.546360 30         0           0.0
+   last7           7.226449 0.765719 30         0           0.0
+same_dow           4.075273 0.675235 30         0           0.0
+    dow4           0.000000 0.000000 30         0           0.0
+    hgbr           0.772521 0.547189 30         3           0.1
+Gradient boosting vs 4-week weekday average: 3 of 30 runs had less waste; mean waste gap = +0.77 percentage points (GB 7.63% vs 4-week 6.86%).
+Chart: charts/m4_second_test_year_2017.png
+Trackio: logged locally to results/m4/trackio (project platelet-forecast-m4 / 04_second_test_year)

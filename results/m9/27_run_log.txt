@@ -1,0 +1,269 @@
+=== Milestone 9 step 2: gradient boosting on detrended data (gbdt) ===
+check: accuracy of existing models vs script 20, max |MAE diff| = 0.00e+00
+check: inventory of existing models vs scripts 08/13, max |waste diff| = 0.00e+00
+1-day MAE:
+model   dow4   hgbr   gbdt  chronos  sarima
+year                                       
+2012   4.038  3.955  3.762    3.727   3.607
+2013   3.992  3.726  3.632    3.543   3.521
+2014   3.831  3.366  3.467    3.489   3.470
+2015   4.513  3.976  4.203    4.138   4.038
+2016   4.223  3.826  3.992    3.923   3.925
+2017   4.210  4.148  4.002    4.006   3.894
+2018   4.360  3.974  3.917    3.905   3.802
+mean: {'chronos': 3.819, 'dow4': 4.167, 'gbdt': 3.854, 'hgbr': 3.853, 'sarima': 3.751}
+1-day bias (actual - forecast):
+model  dow4  hgbr  gbdt  chronos  sarima
+year                                    
+2012   0.06  1.37  0.16     0.49    0.38
+2013  -0.03  1.34  0.10     0.17    0.06
+2014  -0.01 -0.04  0.06     0.27   -0.31
+2015   0.11  0.67  0.11     0.86    0.57
+2016   0.01  0.28  0.21     0.36   -0.17
+2017  -0.03  1.33  0.16     0.59    0.33
+2018   0.24  1.47  0.20     0.72    0.66
+mean: {'chronos': 0.49, 'dow4': 0.05, 'gbdt': 0.14, 'hgbr': 0.92, 'sarima': 0.22}
+2-day MAE:
+model   dow4   hgbr   gbdt  chronos  sarima
+year                                       
+2012   5.954  6.337  5.510    5.363   5.257
+2013   5.466  5.536  5.170    4.923   4.915
+2014   5.727  5.252  5.305    5.175   5.175
+2015   6.464  5.864  6.104    6.197   5.969
+2016   6.550  6.022  6.312    6.029   6.069
+2017   6.586  6.590  6.329    6.409   6.101
+2018   6.707  6.184  5.876    5.843   5.663
+mean: {'chronos': 5.706, 'dow4': 6.208, 'gbdt': 5.801, 'hgbr': 5.969, 'sarima': 5.593}
+2-day bias (actual - forecast):
+model  dow4  hgbr  gbdt  chronos  sarima
+year                                    
+2012   0.09  2.72  0.27     1.01    0.77
+2013  -0.04  2.70  0.19     0.37    0.14
+2014  -0.01 -0.11  0.17     0.60   -0.64
+2015   0.20  1.29  0.20     1.81    1.21
+2016   0.02  0.55  0.37     0.72   -0.36
+2017  -0.04  2.67  0.33     1.29    0.72
+2018   0.51  3.01  0.35     1.51    1.41
+mean: {'chronos': 1.04, 'dow4': 0.1, 'gbdt': 0.27, 'hgbr': 1.83, 'sarima': 0.46}
+4-day MAE:
+model    dow4    hgbr    gbdt  chronos  sarima
+year                                          
+2012    9.467  10.339   8.862    8.607   8.264
+2013    7.843   9.117   7.791    7.251   7.386
+2014    8.814   8.352   8.353    7.852   7.920
+2015    9.857   9.098   9.148    9.629   9.122
+2016   10.487   9.680  10.030    9.691   9.534
+2017   10.260  10.631  10.257   10.234   9.695
+2018   11.179  10.522   9.640    9.896   9.597
+mean: {'chronos': 9.023, 'dow4': 9.701, 'gbdt': 9.155, 'hgbr': 9.677, 'sarima': 8.788}
+4-day bias (actual - forecast):
+model  dow4  hgbr  gbdt  chronos  sarima
+year                                    
+2012   0.17  5.54  0.59     2.01    1.71
+2013  -0.10  5.34  0.30     0.62    0.28
+2014  -0.01 -0.19  0.33     1.13   -1.38
+2015   0.43  2.68  0.37     3.78    2.70
+2016   0.02  0.97  0.67     1.35   -0.85
+2017  -0.08  5.50  0.80     2.81    1.61
+2018   1.08  6.04  0.83     3.16    3.11
+mean: {'chronos': 2.12, 'dow4': 0.22, 'gbdt': 0.56, 'hgbr': 3.7, 'sarima': 1.03}
+DM tests:
+ horizon_days   comparison             year  mean_abs_err_diff   dm_p  holm_p_within_7_years
+            1 gbdt vs dow4             2012            -0.2755 0.0213                 0.0759
+            1 gbdt vs dow4             2013            -0.3604 0.0094                 0.0469
+            1 gbdt vs dow4             2014            -0.3640 0.0039                 0.0232
+            1 gbdt vs dow4             2015            -0.3098 0.0190                 0.0759
+            1 gbdt vs dow4             2016            -0.2311 0.0541                 0.1083
+            1 gbdt vs dow4             2017            -0.2080 0.1634                 0.1634
+            1 gbdt vs dow4             2018            -0.4433 0.0023                 0.0159
+            1 gbdt vs dow4 pooled 2012-2018            -0.3131 0.0000                    NaN
+            1 gbdt vs hgbr             2012            -0.1928 0.2503                 0.9282
+            1 gbdt vs hgbr             2013            -0.0943 0.4063                 0.9282
+            1 gbdt vs hgbr             2014             0.1009 0.1194                 0.5970
+            1 gbdt vs hgbr             2015             0.2273 0.0174                 0.1219
+            1 gbdt vs hgbr             2016             0.1658 0.0624                 0.3745
+            1 gbdt vs hgbr             2017            -0.1461 0.2321                 0.9282
+            1 gbdt vs hgbr             2018            -0.0565 0.6349                 0.9282
+            1 gbdt vs hgbr pooled 2012-2018             0.0006 0.9890                    NaN
+            2 gbdt vs dow4             2012            -0.4442 0.0567                 0.2833
+            2 gbdt vs dow4             2013            -0.2968 0.1752                 0.7008
+            2 gbdt vs dow4             2014            -0.4216 0.0375                 0.2249
+            2 gbdt vs dow4             2015            -0.3608 0.1813                 0.7008
+            2 gbdt vs dow4             2016            -0.2382 0.2724                 0.7008
+            2 gbdt vs dow4             2017            -0.2564 0.3283                 0.7008
+            2 gbdt vs dow4             2018            -0.8319 0.0013                 0.0090
+            2 gbdt vs dow4 pooled 2012-2018            -0.4069 0.0000                    NaN
+            2 gbdt vs hgbr             2012            -0.8267 0.0193                 0.1351
+            2 gbdt vs hgbr             2013            -0.3661 0.1357                 0.6783
+            2 gbdt vs hgbr             2014             0.0529 0.6590                 0.8301
+            2 gbdt vs hgbr             2015             0.2398 0.1776                 0.7105
+            2 gbdt vs hgbr             2016             0.2898 0.0459                 0.2751
+            2 gbdt vs hgbr             2017            -0.2610 0.3340                 0.8301
+            2 gbdt vs hgbr             2018            -0.3084 0.2767                 0.8301
+            2 gbdt vs hgbr pooled 2012-2018            -0.1685 0.0697                    NaN
+            4 gbdt vs dow4             2012            -0.6042 0.1328                 0.7965
+            4 gbdt vs dow4             2013            -0.0517 0.8826                 1.0000
+            4 gbdt vs dow4             2014            -0.4614 0.2027                 0.8109
+            4 gbdt vs dow4             2015            -0.7088 0.1619                 0.8097
+            4 gbdt vs dow4             2016            -0.4566 0.2821                 0.8463
+            4 gbdt vs dow4             2017            -0.0029 0.9944                 1.0000
+            4 gbdt vs dow4             2018            -1.5386 0.0003                 0.0022
+            4 gbdt vs dow4 pooled 2012-2018            -0.5451 0.0006                    NaN
+            4 gbdt vs hgbr             2012            -1.4767 0.0556                 0.3335
+            4 gbdt vs hgbr             2013            -1.3257 0.0119                 0.0832
+            4 gbdt vs hgbr             2014             0.0013 0.9957                 1.0000
+            4 gbdt vs hgbr             2015             0.0505 0.9043                 1.0000
+            4 gbdt vs hgbr             2016             0.3508 0.2061                 1.0000
+            4 gbdt vs hgbr             2017            -0.3734 0.4860                 1.0000
+            4 gbdt vs hgbr             2018            -0.8820 0.2009                 1.0000
+            4 gbdt vs hgbr pooled 2012-2018            -0.5218 0.0099                    NaN
+1-day Holm across 42:
+year           model   dm_p  holm_p_42
+2012 DM_gbdt_vs_dow4 0.0213     0.4692
+2013 DM_gbdt_vs_dow4 0.0094     0.2438
+2014 DM_gbdt_vs_dow4 0.0039     0.1082
+2015 DM_gbdt_vs_dow4 0.0190     0.4362
+2016 DM_gbdt_vs_dow4 0.0541     0.8149
+2017 DM_gbdt_vs_dow4 0.1634     1.0000
+2018 DM_gbdt_vs_dow4 0.0023     0.0726
+hospital waste_pct_mean:
+model   dow4   hgbr   gbdt  chronos  sarima
+year                                       
+2012    8.57   8.97   9.40     7.66    7.44
+2013    7.63   7.25   8.48     7.23    7.70
+2014   13.78  11.91  13.41    11.96   11.97
+2015    7.39   7.88   8.76     7.62    7.55
+2016    9.96   9.57  11.14    10.32    9.78
+2017    6.86   7.63   8.24     7.08    7.14
+2018    8.32   6.78   8.12     6.88    7.06
+mean: {'dow4': 8.93, 'hgbr': 8.57, 'gbdt': 9.65, 'chronos': 8.39, 'sarima': 8.38}
+hospital emergency_units_mean:
+model    dow4    hgbr    gbdt  chronos  sarima
+year                                          
+2012   215.09  216.64  189.46   205.31  197.22
+2013   143.58  141.26  131.53   148.78  145.94
+2014    89.99   97.16  100.09   104.12  104.15
+2015   228.22  185.90  183.27   193.51  192.01
+2016   204.16  162.71  161.81   163.84  172.47
+2017   264.48  236.59  249.69   242.19  235.80
+2018   173.62  192.31  161.79   189.42  183.47
+mean: {'dow4': 188.45, 'hgbr': 176.08, 'gbdt': 168.23, 'chronos': 178.17, 'sarima': 175.86}
+hospital wasted_plus_emergency_mean:
+model    dow4    hgbr    gbdt  chronos  sarima
+year                                          
+2012   573.94  592.50  583.05   526.14  508.72
+2013   488.91  469.26  515.08   476.01  494.14
+2014   618.48  554.06  614.34   563.01  563.26
+2015   587.86  569.39  609.74   564.17  559.57
+2016   631.50  573.12  639.50   606.50  591.93
+2017   612.12  623.40  667.70   601.01  597.64
+2018   637.95  570.96  615.20   573.69  577.95
+mean: {'dow4': 592.97, 'hgbr': 564.67, 'gbdt': 606.37, 'chronos': 558.65, 'sarima': 556.17}
+fixed20 waste_pct_mean:
+model   dow4   hgbr   gbdt  chronos  sarima
+year                                       
+2012   14.26  13.37  14.62    13.18   12.75
+2013   10.44   9.53  10.85     9.67   10.34
+2014   14.11  12.33  13.81    12.26   12.35
+2015   11.84  11.38  11.84    11.13   11.48
+2016   14.70  13.34  14.79    13.57   13.74
+2017   11.99  12.13  13.58    11.46   11.31
+2018   10.50   9.05  10.30     8.94    9.37
+mean: {'dow4': 12.55, 'hgbr': 11.59, 'gbdt': 12.83, 'chronos': 11.46, 'sarima': 11.62}
+fixed20 emergency_units_mean:
+model    dow4    hgbr    gbdt  chronos  sarima
+year                                          
+2012    97.85  122.96   82.64    89.89   80.98
+2013    93.62   97.16   82.27    96.83   92.02
+2014    85.39   92.85   94.53    99.30   99.30
+2015   119.29  103.17   98.68   106.77   99.61
+2016   104.53   86.65   91.87    91.53   88.92
+2017   116.77  111.58  110.49   117.42  118.48
+2018   112.09  131.32  103.81   126.77  116.93
+mean: {'dow4': 104.22, 'hgbr': 106.53, 'gbdt': 94.9, 'chronos': 104.07, 'sarima': 99.46}
+fixed20 wasted_plus_emergency_mean:
+model    dow4    hgbr    gbdt  chronos  sarima
+year                                          
+2012   695.09  682.91  695.07   642.15  615.14
+2013   565.86  528.38  573.06   534.24  559.97
+2014   626.74  565.80  624.18   569.56  572.91
+2015   695.68  657.14  674.89   648.52  658.12
+2016   735.02  658.94  726.19   673.76  678.40
+2017   725.01  726.60  799.36   698.35  692.05
+2018   698.21  636.52  679.03   626.08  639.99
+mean: {'dow4': 677.37, 'hgbr': 636.61, 'gbdt': 681.68, 'chronos': 627.52, 'sarima': 630.94}
+fixed50 waste_pct_mean:
+model  dow4  hgbr  gbdt  chronos  sarima
+year                                    
+2012   7.14  7.50  7.90     6.31    6.10
+2013   5.34  5.23  6.10     5.09    5.53
+2014   7.75  6.78  7.66     6.82    6.70
+2015   5.79  6.09  6.86     6.12    6.06
+2016   7.43  7.53  8.79     7.52    7.35
+2017   5.85  6.50  7.24     5.87    5.95
+2018   5.75  4.79  5.94     4.73    4.75
+mean: {'dow4': 6.43, 'hgbr': 6.34, 'gbdt': 7.21, 'chronos': 6.06, 'sarima': 6.06}
+fixed50 emergency_units_mean:
+model    dow4    hgbr    gbdt  chronos  sarima
+year                                          
+2012   272.18  272.64  246.03   260.93  246.65
+2013   238.62  228.96  232.74   234.78  230.25
+2014   234.03  228.18  229.04   228.19  237.88
+2015   303.84  253.67  251.20   260.11  264.51
+2016   295.27  239.68  245.85   261.55  262.90
+2017   316.00  290.65  296.53   293.61  286.96
+2018   292.28  294.41  267.86   293.60  289.95
+mean: {'dow4': 278.89, 'hgbr': 258.31, 'gbdt': 252.75, 'chronos': 261.82, 'sarima': 259.87}
+fixed50 wasted_plus_emergency_mean:
+model    dow4    hgbr    gbdt  chronos  sarima
+year                                          
+2012   571.16  586.91  576.91   525.45  502.19
+2013   480.02  465.51  508.89   464.85  480.58
+2014   531.26  488.18  522.87   489.70  494.89
+2015   585.78  550.08  584.90   557.97  559.69
+2016   613.94  562.66  623.03   584.35  578.20
+2017   612.54  620.03  663.53   591.13  588.44
+2018   613.46  561.93  599.82   557.51  555.42
+mean: {'dow4': 572.59, 'hgbr': 547.9, 'gbdt': 582.85, 'chronos': 538.71, 'sarima': 537.06}
+Year-level tests:
+  target                         outcome model   vs  years_better  n_years  sign_p  wilcoxon_p  mean_diff    ci_lo    ci_hi  holm_sign_p  holm_wilcoxon_p
+hospital                  Waste (points)  gbdt dow4             2        7  0.4531      0.0781     0.7203   0.0517   1.3888         1.00           0.3906
+hospital                  Waste (points)  hgbr dow4             4        7  1.0000      0.8125    -0.3586  -1.3019   0.5848          NaN              NaN
+hospital                  Waste (points)  gbdt hgbr             0        7  0.0156      0.0156     1.0788   0.6677   1.4900          NaN              NaN
+hospital Wasted + emergency units a year  gbdt dow4             2        7  0.4531      0.2188    13.4082  -9.4844  36.3008         1.00           0.8750
+hospital Wasted + emergency units a year  hgbr dow4             5        7  0.4531      0.1094   -28.2967 -61.2991   4.7058          NaN              NaN
+hospital Wasted + emergency units a year  gbdt hgbr             1        7  0.1250      0.0312    41.7048  19.0433  64.3663          NaN              NaN
+hospital          Emergency units a year  gbdt dow4             6        7  0.1250      0.0312   -20.2133 -37.9917  -2.4350          NaN              NaN
+hospital          Emergency units a year  hgbr dow4             4        7  1.0000      0.3750   -12.3679 -35.1006  10.3649          NaN              NaN
+hospital          Emergency units a year  gbdt hgbr             5        7  0.4531      0.3750    -7.8454 -22.5745   6.8836          NaN              NaN
+ fixed20                  Waste (points)  gbdt dow4             3        7  1.0000      0.3750     0.2783  -0.3096   0.8663         1.00           1.0000
+ fixed20                  Waste (points)  hgbr dow4             6        7  0.1250      0.0312    -0.9589  -1.5591  -0.3587          NaN              NaN
+ fixed20                  Waste (points)  gbdt hgbr             0        7  0.0156      0.0156     1.2373   0.9069   1.5676          NaN              NaN
+ fixed20 Wasted + emergency units a year  gbdt dow4             5        7  0.4531      0.5781     4.3100 -25.7385  34.3585         1.00           1.0000
+ fixed20 Wasted + emergency units a year  hgbr dow4             6        7  0.1250      0.0312   -40.7593 -66.6948 -14.8239          NaN              NaN
+ fixed20 Wasted + emergency units a year  gbdt hgbr             0        7  0.0156      0.0156    45.0694  23.4698  66.6689          NaN              NaN
+ fixed20          Emergency units a year  gbdt dow4             6        7  0.1250      0.0781    -9.3237 -18.0031  -0.6442          NaN              NaN
+ fixed20          Emergency units a year  hgbr dow4             3        7  1.0000      0.6875     2.3063 -12.9721  17.5847          NaN              NaN
+ fixed20          Emergency units a year  gbdt hgbr             5        7  0.4531      0.2188   -11.6300 -27.2395   3.9795          NaN              NaN
+ fixed50                  Waste (points)  gbdt dow4             1        7  0.1250      0.0312     0.7786   0.2592   1.2980         0.75           0.1875
+ fixed50                  Waste (points)  hgbr dow4             3        7  1.0000      0.9375    -0.0898  -0.6833   0.5037          NaN              NaN
+ fixed50                  Waste (points)  gbdt hgbr             0        7  0.0156      0.0156     0.8684   0.6050   1.1319          NaN              NaN
+ fixed50 Wasted + emergency units a year  gbdt dow4             3        7  1.0000      0.4688    10.2550 -10.6641  31.1742         1.00           1.0000
+ fixed50 Wasted + emergency units a year  hgbr dow4             5        7  0.4531      0.1094   -24.6937 -50.4688   1.0815          NaN              NaN
+ fixed50 Wasted + emergency units a year  gbdt hgbr             1        7  0.1250      0.0312    34.9487  14.9041  54.9933          NaN              NaN
+ fixed50          Emergency units a year  gbdt dow4             7        7  0.0156      0.0156   -26.1364 -43.6434  -8.6295          NaN              NaN
+ fixed50          Emergency units a year  hgbr dow4             5        7  0.4531      0.0781   -20.5726 -42.6485   1.5032          NaN              NaN
+ fixed50          Emergency units a year  gbdt hgbr             3        7  1.0000      0.9375    -5.5638 -19.1258   7.9982          NaN              NaN
+Bias by order type (scored days; positive = forecast too low), 7-year mean:
+                                          bias_actual_minus_fc   mae
+order_type                       model                              
+Sun-Wed orders (2 days)          chronos                  1.50  6.02
+                                 dow4                     0.30  6.49
+                                 gbdt                     1.37  6.06
+                                 hgbr                     2.39  6.54
+                                 sarima                   0.79  5.94
+Thursday order (Fri-Mon, 4 days) chronos                  2.31  8.66
+                                 dow4                     0.34  9.30
+                                 gbdt                    -1.45  8.96
+                                 hgbr                     2.41  8.57
+                                 sarima                   0.78  8.34

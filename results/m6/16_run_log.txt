@@ -1,0 +1,10 @@
+=== Low-titer bound, 2018, all three US changes, 31 short days ===
+        calendar           o_to_non_o model  waste_pct_mean  waste_p05  waste_p95  emergency_units_mean  wasted_plus_emergency_mean  o_units_to_non_o_mean  o_units_to_non_o_pct_of_use
+ German calendar every O unit allowed  dow4            3.64       3.12       4.29                187.86                      391.13                  46.92                         0.84
+ German calendar every O unit allowed  hgbr            3.03       2.57       3.52                204.34                      373.35                  49.51                         0.89
+ German calendar    no O unit allowed  dow4            4.58       3.94       5.36                160.13                      415.73                   0.00                         0.00
+ German calendar    no O unit allowed  hgbr            3.91       3.28       4.43                181.31                      399.56                   0.00                         0.00
+daily deliveries every O unit allowed  dow4            1.69       1.43       2.01                175.76                      270.27                  45.19                         0.81
+daily deliveries every O unit allowed  hgbr            1.79       1.44       2.03                170.96                      270.70                  42.62                         0.76
+daily deliveries    no O unit allowed  dow4            2.33       1.89       2.79                142.54                      272.61                   0.00                         0.00
+daily deliveries    no O unit allowed  hgbr            2.29       1.92       2.79                149.92                      277.73                   0.00                         0.00

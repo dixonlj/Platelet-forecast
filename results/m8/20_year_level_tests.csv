@@ -1,0 +1,26 @@
+analysis,outcome,model,years_better,n_years,sign_p,wilcoxon_p,mean_diff,ci_lo,ci_hi
+matched to test-year short days (main),Waste (points),hgbr,4,7,1.0,0.8125,-0.3585557529525848,-1.301922323626518,0.5848108177213485
+matched to test-year short days (main),Waste (points),chronos,4,7,1.0,0.21875,-0.5360019915442763,-1.341233680277753,0.2692296971892003
+matched to test-year short days (main),Waste (points),sarima,4,7,1.0,0.296875,-0.5524693034525716,-1.3187921034758299,0.21385349657068675
+matched to test-year short days (main),Waste (points),lasso,4,7,1.0,0.9375,-0.12099666203712418,-0.9502915525209906,0.7082982284467422
+matched to test-year short days (main),Waste (points),rnn,6,7,0.125,0.078125,-0.7080019053683761,-1.4317860334670498,0.0157822227302975
+matched to test-year short days (main),Wasted + emergency units a year,hgbr,5,7,0.453125,0.109375,-28.29665153413641,-61.29908337726972,4.7057803089969
+matched to test-year short days (main),Wasted + emergency units a year,chronos,7,7,0.015625,0.015625,-34.319783685176944,-54.0227779414745,-14.616789428879382
+matched to test-year short days (main),Wasted + emergency units a year,sarima,6,7,0.125,0.03125,-36.79336602436711,-60.761037104228606,-12.825694944505617
+matched to test-year short days (main),Wasted + emergency units a year,lasso,5,7,0.453125,0.15625,-21.708167135580595,-52.521419030120356,9.105084758959169
+matched to test-year short days (main),Wasted + emergency units a year,rnn,6,7,0.125,0.03125,-45.82264303749225,-72.99829256404186,-18.646993510942643
+cushion set from prior year (script 19),Waste (points),hgbr,3,7,1.0,0.578125,0.8714947644473617,-1.5842297230608682,3.3272192519555914
+cushion set from prior year (script 19),Waste (points),chronos,4,7,1.0,0.46875,-0.46285347350436407,-1.7614357761013486,0.8357288290926204
+cushion set from prior year (script 19),Waste (points),sarima,4,7,1.0,0.6875,-0.24685638563039827,-1.7390833355984645,1.245370564337668
+cushion set from prior year (script 19),Waste (points),lasso,4,7,1.0,1.0,0.09764139551848647,-1.6554446491303592,1.8507274401673321
+cushion set from prior year (script 19),Waste (points),rnn,4,7,1.0,0.9375,-0.23905398957464602,-2.880998802576331,2.402890823427039
+cushion set from prior year (script 19),Wasted + emergency units a year,hgbr,4,7,1.0,0.9375,0.5687939291697391,-59.048404722538066,60.18599258087754
+cushion set from prior year (script 19),Wasted + emergency units a year,chronos,7,7,0.015625,0.015625,-34.471285297099826,-61.78120349096656,-7.161367103233086
+cushion set from prior year (script 19),Wasted + emergency units a year,sarima,5,7,0.453125,0.109375,-32.10814055445328,-65.3932631753132,1.1769820664066373
+cushion set from prior year (script 19),Wasted + emergency units a year,lasso,4,7,1.0,0.578125,-9.176162567194337,-51.667480005828374,33.315154871439695
+cushion set from prior year (script 19),Wasted + emergency units a year,rnn,4,7,1.0,0.46875,-17.44236110482407,-61.47337243896504,26.588650229316908
+cushion set from prior year (script 19),Short days,hgbr,5,7,0.453125,0.578125,-4.143456928380078,-18.26413674020183,9.977222883441677
+cushion set from prior year (script 19),Short days,chronos,3,7,1.0,1.0,0.27086695401635147,-8.281561462602195,8.823295370634899
+cushion set from prior year (script 19),Short days,sarima,5,7,0.453125,0.9375,-0.6263805192476742,-10.450314109534624,9.197553071039277
+cushion set from prior year (script 19),Short days,lasso,3,7,1.0,0.6875,1.7440933048470717,-7.619852584850552,11.108039194544695
+cushion set from prior year (script 19),Short days,rnn,4,7,1.0,0.9375,1.5615627941747603,-13.845182589853263,16.968308178202783
