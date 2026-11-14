@@ -1,0 +1,4 @@
+what,demand,waste_units,short_units,shortage_days,waste_pct,shortage_pct
+Hospital actual (recorded),5584.0,687.0,217.0,31,12.3,3.89
+"Authors' own sim, lasso (from their file)",,,144.0,26,1.99,
+"Authors' own sim, rnn (from their file)",,,179.0,30,1.33,
