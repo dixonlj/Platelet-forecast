@@ -21,6 +21,9 @@ keywords:
   - blood bank
 identifiers:
   - type: doi
+    value: "10.5281/zenodo.24237979"
+    description: "This version of the software and manuscript (v0.11.0), archived on Zenodo"
+  - type: doi
     value: "10.17605/OSF.IO/PHQ42"
     description: "Analysis plan, registered retrospectively on OSF Registries on 14 November 2026, after the analyses were run"
 references:

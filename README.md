@@ -161,7 +161,7 @@ python3 build_paper.py v11 --layout   # journal-style draft_v11_layout.pdf and s
 
 The number checks write `paper/refcheck/v10_number_check.md` and `paper/refcheck/v11_number_check.md`. Seeds are fixed (simulation 1000-1029; bootstrap 20261114 and 20261115), so a rerun with the pinned versions should give the same result files.
 
-**Archive:** a Zenodo archive of this repository will be made on release: [Zenodo DOI – pending].
+**Archive:** this version (v0.11.0) is archived on Zenodo: https://doi.org/10.5281/zenodo.24237979.
 
 Scripts 32, 33, 35, 36, 44 and 45 only check that numbers quoted in a given draft match the result files; they are not needed to reproduce the results.
 
@@ -221,6 +221,6 @@ paper/             draft v10 (sources, Word, PDF), journal plan, deviations, OSF
 
 - **Code:** MIT licence (see `LICENSE`).
 - **Data:** CC BY 4.0, Schilling et al. 2022 (see above).
-- **Citation:** if you use this work, please cite it using `CITATION.cff` and also cite the data source. A Zenodo DOI will be added when the archive is released. The analysis plan is registered (retrospectively) on OSF: https://doi.org/10.17605/OSF.IO/PHQ42.
+- **Citation:** if you use this work, please cite it using `CITATION.cff` and also cite the data source. This version (v0.11.0) is archived on Zenodo: https://doi.org/10.5281/zenodo.24237979. The analysis plan is registered (retrospectively) on OSF: https://doi.org/10.17605/OSF.IO/PHQ42.
 
 Author: Liam Dixon, independent researcher ([ORCID 0009-0003-0610-197X](https://orcid.org/0009-0003-0610-197X)). Personal, educational project, not funded or endorsed by any employer.

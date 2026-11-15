@@ -1,6 +1,6 @@
 # DOI and date placeholders in draft v11
 
-**Status (14 November 2026, about 21:20 ET): the OSF DOI has been swapped in.** The registration was approved and made public on 14 November 2026 (registered 16:59 ET, `date_registered` 2026-11-14T21:59 UTC per the OSF API; approved about 21:16 ET). DOI: https://doi.org/10.17605/OSF.IO/PHQ42. Sections 1 and 3 below are done and kept as a record; only the Zenodo DOI (section 2) is still a placeholder. Once the repository is public, also delete the "private at the time of writing" wording listed in section 2.
+**Status (14 November 2026, about 22:15 ET): all placeholders have been swapped in.** The OSF registration was approved and made public on 14 November 2026 (registered 16:59 ET, `date_registered` 2026-11-14T21:59 UTC per the OSF API; approved about 21:16 ET). OSF DOI: https://doi.org/10.17605/OSF.IO/PHQ42. The GitHub repository is public. Release v0.11.0 was created and Zenodo minted https://doi.org/10.5281/zenodo.24237979 (record https://zenodo.org/records/24237979). Sections 1–3 below are done and kept as a record.
 
 When OSF approves the registration (https://osf.io/phq42/), check the DOI on the registration page (expected `10.17605/OSF.IO/PHQ42`) and the registration date shown by OSF. Then replace the placeholders below **in the source files** (`*.src.md`, `references.bib`, `README.md`) and rebuild (`cd paper && python3 build_paper.py v11 && python3 build_paper.py v11 --layout`, then `soffice --headless --convert-to pdf draft_v11.docx supplement_v11.docx`). The `.md`, `.docx` and `.pdf` files are generated, so do not edit them by hand.
 
@@ -19,9 +19,9 @@ Replace with `https://doi.org/10.17605/OSF.IO/PHQ42` (or the DOI OSF actually sh
 
 The README on GitHub says "OSF DOI pending" in two places (the "Latest" section and the "Licence and citation" section): replace with the DOI link.
 
-## 2. Zenodo DOI: `[Zenodo DOI – pending]`
+## 2. Zenodo DOI: `[Zenodo DOI – pending]` (DONE: replaced by https://doi.org/10.5281/zenodo.24237979)
 
-Only after Liam says yes to making the repository public and creating a release.
+Done after Liam's explicit yes ("Do all"): repository made public on 14 November 2026, release v0.11.0 created, and the placeholder replaced with https://doi.org/10.5281/zenodo.24237979. The "private at the time of writing" wording listed below was also deleted, and "will be available at" was changed to "are available at".
 
 | # | File | Line | Where |
 |---|---|---|---|

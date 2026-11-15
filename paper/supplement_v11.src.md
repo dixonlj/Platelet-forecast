@@ -105,7 +105,7 @@ All 2,700 combinations (5 calendars × 15 life-on-arrival mixes × 4 logging del
 | Experimentation (runs, seeds, warm-up) | 30 common random-number runs, seeds 1000–1029; one-week warm-up; scoring 8 January to 18 December |
 | Verification and validation | Code self-test on synthetic data (`scripts/37_m10_selftest.py`); validation Table 1 (failed) |
 | Implementation | Python; software versions in `requirements.txt`; Chronos-Bolt in a separate environment (S1.2 item 9) |
-| Code access | https://github.com/dixonlj/Platelet-forecast (private at the time of writing; to be made public before posting), archive [Zenodo DOI – pending] |
+| Code access | https://github.com/dixonlj/Platelet-forecast, archive https://doi.org/10.5281/zenodo.24237979 |
 
 # References
 
