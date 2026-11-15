@@ -7,7 +7,7 @@ csl: vancouver.csl
 link-citations: true
 ---
 
-**Educational analysis of public data.** Not a clinical tool and not ordering advice. Every number in this supplement is generated from the result files in `results/m10/` and `study2/results/s2m10/` by `scripts/43_tables_v10.py` (unchanged for v11), except the deviation log in S1, which is reproduced from `paper/prereg_deviations.md`.
+**This is not a clinical tool and not ordering advice.** Every number in this supplement is generated from the result files in `results/m10/` and `study2/results/s2m10/` by `scripts/43_tables_v10.py` (unchanged for v11), except the deviation log in S1, which is reproduced from `paper/prereg_deviations.md`.
 
 # S1. Deviations, clarifications and exploratory observations
 

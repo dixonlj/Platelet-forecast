@@ -51,3 +51,7 @@ paper/layout_preview/
 results/m10/raw/
 !paper/changes_v9_to_v10.md
 !paper/refcheck/v10_number_check.md
+
+# v11 package exceptions
+!paper/changes_v10_to_v11.md
+!paper/refcheck/v11_number_check.md

@@ -9,7 +9,7 @@ link-citations: true
 
 **Liam Dixon**, Medical Laboratory Technician, Independent researcher. ORCID: 0009-0003-0610-197X. Contact: dixonlj1993@gmail.com
 
-**Educational analysis of public data.** This is a learning exercise. It is not a clinical tool, not blood-bank ordering advice and not a recommendation for any hospital. Nothing here should be used to decide whether a patient receives a unit, or how many units a real blood bank should order or keep.
+**This is not a clinical tool, not blood-bank ordering advice and not a recommendation for any hospital.** Nothing here should be used to decide whether a patient receives a unit, or how many units a real blood bank should order or keep.
 
 **Running title:** Platelet forecasts versus a standing order. **Article type:** Original Article (prepared for *Transfusion Medicine*). **Analysis plan:** written before the analyses were run (according to the author's file time stamps) and registered retrospectively on OSF Registries on 14 November 2026, after the analyses: https://osf.io/phq42/, https://doi.org/10.17605/OSF.IO/PHQ42. **Display items:** 3 tables, 3 figures. **Supplement:** Supplement v11.
 

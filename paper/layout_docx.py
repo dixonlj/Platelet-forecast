@@ -196,7 +196,7 @@ def title_block(d):
         if p.style.name == "Date":
             seen_date = True; continue
         if seen_date and p.text.strip():
-            if p.text.startswith("Educational analysis of public data"):
+            if p.text.startswith("This is not a clinical tool"):
                 ppr = p._p.get_or_add_pPr()
                 bdr = el("w:pBdr")
                 for side in ("top", "left", "bottom", "right"):
@@ -457,4 +457,4 @@ if __name__ == "__main__":
     a = sys.argv[1:]
     ln = "--line-numbers" in a
     a = [x for x in a if x != "--line-numbers"]
-    print(polish(a[0], a[1], "Educational analysis of public data. Not clinical or ordering advice.", ln))
+    print(polish(a[0], a[1], "Not clinical or ordering advice.", ln))

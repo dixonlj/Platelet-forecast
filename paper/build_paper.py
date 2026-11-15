@@ -62,7 +62,7 @@ def build_layout(name, line_numbers=False):
                     "--reference-doc", REF.name, "-o", raw.name], check=True, cwd=P)
     src.unlink()
     for level in (0, 1, 2):
-        rep = polish(str(raw), str(out), "Educational analysis of public data. Not clinical or ordering advice.",
+        rep = polish(str(raw), str(out), "Not clinical or ordering advice.",
                      line_numbers, bib_level=level)
         subprocess.run(["soffice", "--headless", "--convert-to", "pdf", "--outdir", str(P), str(out)],
                        check=True, cwd=P, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
@@ -88,7 +88,7 @@ if __name__ == "__main__":
     args = [a for a in sys.argv[1:] if not a.startswith("--")]
     ver = args[0] if args else "v3"
     # v4 onward: posting version; medRxiv adds its own "not peer reviewed" banner.
-    make_reference() if ver in ("v1", "v2", "v3") else make_reference("Educational analysis of public data. Not clinical or ordering advice.")
+    make_reference() if ver in ("v1", "v2", "v3") else make_reference("Not clinical or ordering advice.")
     for n in (f"draft_{ver}", f"supplement_{ver}"):
         vnum = int(ver.lstrip("v")) if ver.lstrip("v").isdigit() else 0
         # v10 onward use only charts/m10_*.png (no paper-size redraws), so script 25 is not needed; it also needs

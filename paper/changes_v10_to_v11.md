@@ -48,3 +48,13 @@ The OSF registration was approved and made public, so every `[OSF DOI – pendin
 ## Update, 14 November 2026 (late evening): Zenodo DOI swapped in (R7 now done)
 
 The GitHub repository https://github.com/dixonlj/Platelet-forecast was made public. Release v0.11.0 was created, and Zenodo minted https://doi.org/10.5281/zenodo.24237979 (record https://zenodo.org/records/24237979). Every `[Zenodo DOI – pending]` placeholder was replaced with that DOI, "will be available at" now reads "are available at", and the "private at the time of writing" wording was deleted: Statements in the draft; Supplement S8 "Code access" row; README ("Archive:" line and the Licence and citation sentence). `CITATION.cff` keeps version 0.11.0 and now also lists the Zenodo DOI as an identifier. No new tag or release was created. No numbers changed.
+
+## Update, 14 November 2026 (night): medRxiv screening wording
+
+Before the medRxiv submission, the title-page banner and the running header were changed so screeners would not class the paper as teaching material. The no-clinical-advice warning is unchanged. No numbers were changed.
+
+- Draft title-page banner now reads: "This is not a clinical tool, not blood-bank ordering advice and not a recommendation for any hospital. Nothing here should be used to decide whether a patient receives a unit, or how many units a real blood bank should order or keep."
+- Supplement title-page banner now reads: "This is not a clinical tool and not ordering advice." (The sentence about how the tables are generated is unchanged.)
+- Running header on both layout PDFs now reads: "Not clinical or ordering advice."
+- Affiliation remains "Independent researcher."
+- The medRxiv licence choice is CC BY. The AI-use statement was approved as written.

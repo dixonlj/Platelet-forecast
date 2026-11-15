@@ -8,7 +8,7 @@ reference-section-title: References
 title: "Supplement v11 to: Demand forecasts versus a standing order for platelet ordering: a simulation study of public data from two hospitals, with a retrospectively registered analysis plan"
 ---
 
-**Educational analysis of public data.** Not a clinical tool and not ordering advice. Every number in this supplement is generated from the result files in `results/m10/` and `study2/results/s2m10/` by `scripts/43_tables_v10.py` (unchanged for v11), except the deviation log in S1, which is reproduced from `paper/prereg_deviations.md`.
+**This is not a clinical tool and not ordering advice.** Every number in this supplement is generated from the result files in `results/m10/` and `study2/results/s2m10/` by `scripts/43_tables_v10.py` (unchanged for v11), except the deviation log in S1, which is reproduced from `paper/prereg_deviations.md`.
 
 # S1. Deviations, clarifications and exploratory observations
 
