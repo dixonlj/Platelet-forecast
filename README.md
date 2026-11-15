@@ -7,19 +7,20 @@ An educational project that forecasts daily platelet demand and simulates a hosp
 > **Educational and advisory only. Not for clinical use.**
 > This is a learning project. It is not a clinical tool, not a blood-bank ordering system and not advice for any hospital. Nothing here should be used to decide whether a patient receives a unit, or how many units a real blood bank should order or keep. It uses only public, aggregate data and has never been connected to any hospital system.
 
-A manuscript is in [`paper/`](paper/). **Draft v10** (latest) reports the confirmatory re-analysis that followed a written analysis plan; draft v9 is the earlier exploratory study.
+A manuscript is in [`paper/`](paper/). **Draft v11** (latest) reports a pre-specified re-analysis of previously analysed data that followed a written analysis plan, registered retrospectively on OSF after the analyses ([osf.io/phq42](https://osf.io/phq42/)). Draft v10 is the previous version; draft v9 is the earlier exploratory study.
 
-## Latest: draft v10 (re-analysis per a written analysis plan)
+## Latest: draft v11 (re-analysis per a written analysis plan)
 
-The analysis plan ([`prereg/osf_preregistration_final.md`](prereg/osf_preregistration_final.md)) was finalised and its 35 inputs fingerprinted ([`prereg/osf_prereg_input_hashes.txt`](prereg/osf_prereg_input_hashes.txt)) before the analyses were run on 14 November 2026. It was registered on OSF later the same day, **after** the analyses; the paper states this as a limitation and as deviation D8.
+According to the author's file time stamps, the analysis plan ([`prereg/osf_preregistration_final.md`](prereg/osf_preregistration_final.md)) was finalised and its 35 inputs fingerprinted ([`prereg/osf_prereg_input_hashes.txt`](prereg/osf_prereg_input_hashes.txt)) before the analyses were run on 14 November 2026. Those time stamps cannot be independently verified, and the analysis code was written after the plan. A **retrospective** registration was submitted to OSF later the same day, **after** the analyses (https://osf.io/phq42/; OSF DOI pending). The paper states this as a limitation and as deviation D8. The file names keep the word "prereg" from when they were written; the registration itself is retrospective.
 
 - **The calibrated simulation failed its own preset check.** Simulated waste was 5.22% against 9.74% recorded; emergency units per short day were 5.00 against 8.82; the weekday pattern missed its limit (TVD 0.226 against 0.20). Every result is conditional on that.
 - **Aachen: no forecast was shown to waste less than last year's standing order** (5.30% waste). SARIMA −0.33 points (95% CI −0.88 to +0.22), Chronos-Bolt −0.12, detrended gradient boosting +0.07, gradient boosting +0.17. None was shown to be equivalent either.
-- **Stanford (public `pip` data): estimates favoured the forecasts by 1.4–2.3 points, but none survived the Holm correction** (adjusted p ≥ 0.10). Under the plan's rule, this is a consistent null.
-- **Exploratory:** the delivery calendar mattered most (SARIMA −2.47 points under Tue–Sat, −1.77 under Mon–Fri).
+- **Stanford (public `pip` data): estimates favoured the forecasts by 1.4–2.3 points, but were too uncertain after the Holm correction** (adjusted p ≥ 0.10). The plan's label for this is "consistent null", which does not mean no effect; the comparator was weak there.
+- **The answer depends on the delivery calendar (exploratory).** Under the hospital's documented Tue–Sat calendar, SARIMA wasted 2.47 points less than the standing order (95% CI −3.52 to −1.42); under Mon–Fri, 1.77 less. The calibrated Mon–Sat calendar is the one that leaves forecasts least room to help.
 
 Files:
-- [`paper/draft_v10_layout.pdf`](paper/draft_v10_layout.pdf) and [`paper/supplement_v10_layout.pdf`](paper/supplement_v10_layout.pdf);
+- [`paper/draft_v11_layout.pdf`](paper/draft_v11_layout.pdf) and [`paper/supplement_v11_layout.pdf`](paper/supplement_v11_layout.pdf) (latest); what changed: [`paper/changes_v10_to_v11.md`](paper/changes_v10_to_v11.md);
+- previous version: [`paper/draft_v10_layout.pdf`](paper/draft_v10_layout.pdf) and [`paper/supplement_v10_layout.pdf`](paper/supplement_v10_layout.pdf);
 - the journal plan: [`paper/journal_plan_v10.md`](paper/journal_plan_v10.md);
 - deviations: [`paper/prereg_deviations.md`](paper/prereg_deviations.md);
 - the note to add to the OSF registration: [`paper/osf_update_text.md`](paper/osf_update_text.md);
@@ -110,25 +111,59 @@ python scripts/31_charts_v6.py              #   v6/v7/v9 charts, including the s
 python scripts/34_tables_v8.py              #   standing-order tables from saved results
 ```
 
-Draft v10 (calibrated simulation, run per the analysis plan):
+## Reproduce draft v10 and v11
+
+Drafts v10 and v11 use the same results; v11 changes only the wording, three figure footnotes and the reference to the registration. Tested with **Python 3.13.5** on Linux, CPU only.
+
+Two environments are used:
+
+- **`.venv`** for everything except Chronos-Bolt: `python3.13 -m venv .venv && .venv/bin/pip install -r requirements.txt`.
+- **`.venv-chronos`** only for the Stanford Chronos-Bolt forecasts (script `study2/scripts/10b_m10_chronos.py`; chronos-forecasting 2.3.2 and torch, CPU): `python3.13 -m venv .venv-chronos && .venv-chronos/bin/pip install -r requirements.txt chronos-forecasting==2.3.2 torch`. The Aachen Chronos-Bolt forecasts are cached in `results/m5/`, so they do not need it.
+
+**1. Cached forecasts the m10 scripts read.** Script 40 reuses earlier forecasts without refitting their settings. Gradient boosting is refitted in the run itself, and the Aachen Chronos-Bolt forecasts are included (`results/m5/chronos_forecasts_2010-12-31_2018-12-30.csv`). The SARIMA and detrended gradient-boosting forecasts are not included (see `.gitignore`), so create them first, from the repository root:
 
 ```bash
-python scripts/37_m10_selftest.py           # new simulator checked on the synthetic series only
-python scripts/38_m10_calibration.py        # calibration on 2009-2011, standing order only
-python scripts/39_m10_validation.py         # validation on 2012-2018, standing order only
-python scripts/40_m10_run_comparisons.py    # primary, secondary and sensitivity simulations
-python scripts/41_m10_stats.py              # mixed models, Holm, labels, secondary tables
-python scripts/42_m10_charts_descriptive.py # charts and descriptive accuracy
-python study2/scripts/10_m10_forecasts.py   # Stanford: standing order and detrended GB forecasts
-python study2/scripts/10b_m10_chronos.py    # Stanford: Chronos-Bolt (optional packages)
-python study2/scripts/11_m10_stanford_replication.py
-python scripts/43_tables_v10.py             # v10 paper tables from the results files
-python scripts/44_check_v10_numbers.py      # number check for draft v10
+export PYTHONPATH=scripts
+.venv/bin/python scripts/12_sarima.py               # results/m6/12_sarima_forecasts_<year>.csv
+.venv/bin/python scripts/27_gb_detrended.py         # results/m9/27_gb_detrended_forecasts_<year>.csv
 ```
 
-The Stanford scripts expect the public `pip` example data and the milestone S2-1 forecasts in `study2/`. Those inputs are not included here; see the paper for the source (https://github.com/bnaras/pip, GPL-2 or later). Per-run raw simulation files (`results/m10/raw/`) are not included either; script 40 recreates them.
+**2. The m10 analyses (Aachen), in this order:**
 
-Scripts 32, 33, 35, 36 and 44 only check that numbers quoted in a given draft match the result files; they are not needed to reproduce the results.
+```bash
+.venv/bin/python scripts/37_m10_selftest.py           # simulator self-test on the SYNTHETIC series only
+.venv/bin/python scripts/38_m10_calibration.py        # calibration on 2009-2011, standing order only
+.venv/bin/python scripts/39_m10_validation.py         # validation on 2012-2018 (it fails; reported)
+.venv/bin/python scripts/40_m10_run_comparisons.py    # primary, secondary and sensitivity simulations (slow)
+.venv/bin/python scripts/41_m10_stats.py              # mixed models, Holm, labels, secondary tables
+.venv/bin/python scripts/42_m10_charts_descriptive.py # descriptive accuracy and the four m10 charts
+#   (add --charts-only to redraw the charts from the saved results without recomputing accuracy)
+```
+
+**3. Stanford (second site):**
+
+```bash
+.venv/bin/python study2/scripts/10_m10_forecasts.py          # standing order and detrended GB forecasts
+.venv-chronos/bin/python study2/scripts/10b_m10_chronos.py   # Chronos-Bolt forecasts
+.venv/bin/python study2/scripts/11_m10_stanford_replication.py
+```
+
+**4. Tables, number checks and the paper** (pandoc 3.x, python-docx, Pillow and LibreOffice for the PDFs):
+
+```bash
+.venv/bin/python scripts/43_tables_v10.py             # paper tables (used by v10 and v11)
+.venv/bin/python scripts/44_check_v10_numbers.py      # every number in draft v10 vs the results files
+.venv/bin/python scripts/45_check_v11_numbers.py      # every number in draft v11 vs the results files
+cd paper
+python3 build_paper.py v11            # draft_v11.md/.docx and supplement_v11.md/.docx (use v10 for draft v10)
+python3 build_paper.py v11 --layout   # journal-style draft_v11_layout.pdf and supplement_v11_layout.pdf
+```
+
+The number checks write `paper/refcheck/v10_number_check.md` and `paper/refcheck/v11_number_check.md`. Seeds are fixed (simulation 1000-1029; bootstrap 20261114 and 20261115), so a rerun with the pinned versions should give the same result files.
+
+**Archive:** a Zenodo archive of this repository will be made on release: [Zenodo DOI – pending].
+
+Scripts 32, 33, 35, 36, 44 and 45 only check that numbers quoted in a given draft match the result files; they are not needed to reproduce the results.
 
 Notes:
 
@@ -186,6 +221,6 @@ paper/             draft v10 (sources, Word, PDF), journal plan, deviations, OSF
 
 - **Code:** MIT licence (see `LICENSE`).
 - **Data:** CC BY 4.0, Schilling et al. 2022 (see above).
-- **Citation:** if you use this work, please cite it using `CITATION.cff` and also cite the data source. A Zenodo DOI will be added when the archive is released. The OSF registration DOI will be added when it is issued.
+- **Citation:** if you use this work, please cite it using `CITATION.cff` and also cite the data source. A Zenodo DOI will be added when the archive is released. The OSF registration is at https://osf.io/phq42/ (retrospective; DOI pending).
 
 Author: Liam Dixon, independent researcher ([ORCID 0009-0003-0610-197X](https://orcid.org/0009-0003-0610-197X)). Personal, educational project, not funded or endorsed by any employer.

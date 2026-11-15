@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Milestone 10: descriptive forecast accuracy (already known; descriptive only, prereg 4.2)
+"""Milestone 10: descriptive forecast accuracy (already known; descriptive only, analysis plan 4.2)
 and the simple charts for the revision results. One idea per chart, takeaway in the title.
 Educational / advisory only. Public data. Not clinical.
 Run: PYTHONPATH=scripts .venv/bin/python scripts/42_m10_charts_descriptive.py
@@ -96,7 +96,7 @@ def chart_primary():
     forest(rows, CH / "m10_primary_vs_standing_order.png",
            "Aachen: no forecast clearly wasted less\nthan last year's standing order",
            "Difference in waste vs standing order (percentage points, 95% CI)", 0.5,
-           "Preregistered primary analysis. Aachen 2012-2018, calibrated simulation (which failed its validation check), cushion "
+           "Planned primary analysis (plan registered retrospectively, after the analyses). Aachen 2012-2018, calibrated simulation (which failed its validation check), cushion "
            "sized to each order's days, matched to each year's recorded short days, 30 runs. Mixed model over 84 four-week blocks; "
            "Holm-adjusted p >= 0.75 for all four. Grey band: +/-0.5 points. Simulation only.", (-1.5, 1.5))
 
@@ -109,7 +109,7 @@ def chart_stanford():
     forest(rows, CH / "m10_stanford_vs_standing_order.png",
            "Stanford: forecasts wasted less than the standing order,\nbut the evidence is too uncertain to count",
            "Difference in waste vs standing order (percentage points, 95% CI)", mmd,
-           f"Preregistered replication. Stanford public pip data, 8 Jan 2014 - 31 May 2015 (509 days), shortages on 5 days (1%). "
+           f"Planned second-site analysis (plan registered retrospectively). Stanford public pip data, 8 Jan 2014 - 31 May 2015 (509 days), shortages on 5 days (1%). "
            f"Standing order wasted {p.window_waste_base.iloc[0]:.1f}%. Moving-block bootstrap over 18 four-week blocks; "
            f"Holm-adjusted p 0.10 to 0.22. Grey band: +/-6% of the standing order's waste ({mmd:.2f} points). Simulation only.",
            (-5, 3.2))
@@ -129,11 +129,13 @@ def chart_tradeoff():
     ax.set_ylim(0, max(8, float(c.max().max()) * 1.1))
     ax.set_title("Accepting more short days cuts waste for every method;\nthe methods differ by less than one point", fontsize=17)
     foot(fig, "Aachen 2012-2018, calibrated simulation (failed validation), cushion sized to each order's days. Average over 7 "
-              "years and 30 runs. Preregistered secondary analysis (RQ3). Simulation only.")
+              "years and 30 runs. Planned secondary analysis (RQ3; plan registered retrospectively). Simulation only.")
     fig.tight_layout(rect=(0, 0.08, 1, 1)); fig.savefig(CH / "m10_tradeoff_curves.png", dpi=150); plt.close(fig)
 
 
 if __name__ == "__main__":
-    print(descriptive_mae())
+    import sys
+    if "--charts-only" not in sys.argv:   # v11: --charts-only redraws the four charts from saved results
+        print(descriptive_mae())
     chart_validation(); chart_primary(); chart_stanford(); chart_tradeoff()
     print("charts written")
