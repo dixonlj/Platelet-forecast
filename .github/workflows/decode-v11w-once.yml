@@ -1,0 +1,30 @@
+name: decode-v11w-once
+on:
+  push:
+    branches: [main]
+    paths: ['_staging_v11w/TARBALL.sha256']
+permissions:
+  contents: write
+jobs:
+  unpack:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Unpack files, commit, and remove this one-shot workflow
+        run: |
+          set -euo pipefail
+          cd _staging_v11w
+          cat release.b64.part* | base64 -d > release.tar.gz
+          sha256sum -c TARBALL.sha256
+          cd ..
+          tar -xzf _staging_v11w/release.tar.gz
+          sha256sum -c _staging_v11w/SHA256SUMS
+          awk '{print $2}' _staging_v11w/SHA256SUMS > /tmp/v11w_files.txt
+          git rm -r -q _staging_v11w
+          git rm -q .github/workflows/decode-v11w-once.yml
+          git config user.name "dixonlj"
+          git config user.email "dixonlj1993@gmail.com"
+          xargs -a /tmp/v11w_files.txt git add -f --
+          git commit -q -m "v11: drop educational/learning-exercise wording from banner and header"
+          git push
+          git show --stat --format='%H' HEAD | tail -5
