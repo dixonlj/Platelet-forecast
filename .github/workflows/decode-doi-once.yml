@@ -1,0 +1,30 @@
+name: decode-doi-once
+on:
+  push:
+    branches: [main]
+    paths: ['_staging_doi/TARBALL.sha256']
+permissions:
+  contents: write
+jobs:
+  unpack:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Unpack files, commit, and remove this one-shot workflow
+        run: |
+          set -euo pipefail
+          cd _staging_doi
+          cat release.b64.part* | base64 -d > release.tar.gz
+          sha256sum -c TARBALL.sha256
+          cd ..
+          tar -xzf _staging_doi/release.tar.gz
+          sha256sum -c _staging_doi/SHA256SUMS
+          awk '{print $2}' _staging_doi/SHA256SUMS > /tmp/doi_files.txt
+          git rm -r -q _staging_doi
+          git rm -q .github/workflows/decode-doi-once.yml
+          git config user.name "dixonlj"
+          git config user.email "dixonlj1993@gmail.com"
+          xargs -a /tmp/doi_files.txt git add -f --
+          git commit -q -m "v11: add Zenodo DOI 10.5281/zenodo.24237979; repo now public"
+          git push
+          git show --stat --format='%H' HEAD | tail -5
