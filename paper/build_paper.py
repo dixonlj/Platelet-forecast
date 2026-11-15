@@ -70,6 +70,7 @@ def build_layout(name, line_numbers=False):
         if lines >= 10:
             break
     raw.unlink()
+    (P / "layout_preview").mkdir(exist_ok=True)
     (P / "layout_preview" / f"{name}_minus_signs.txt").write_text(
         f"{len(rep['minus'])} hyphen-minus signs converted to U+2212 (context shown):\n" + "\n".join(rep["minus"]) + "\n")
     print(f"{name}: {pages} pages; last page {lines} text lines; bibliography level {level}; "
@@ -89,7 +90,10 @@ if __name__ == "__main__":
     # v4 onward: posting version; medRxiv adds its own "not peer reviewed" banner.
     make_reference() if ver in ("v1", "v2", "v3") else make_reference("Educational analysis of public data. Not clinical or ordering advice.")
     for n in (f"draft_{ver}", f"supplement_{ver}"):
-        if "--layout" in sys.argv and n.startswith("draft_"):   # redraw paper-size charts from results files first
+        vnum = int(ver.lstrip("v")) if ver.lstrip("v").isdigit() else 0
+        # v10 onward use only charts/m10_*.png (no paper-size redraws), so script 25 is not needed; it also needs
+        # per-run files that are not in the public repository. Force it with --redraw-old-charts.
+        if "--layout" in sys.argv and n.startswith("draft_") and (vnum < 10 or "--redraw-old-charts" in sys.argv):
             subprocess.run([sys.executable, str(P.parent / "scripts" / "25_charts_paper.py")], check=True)
             if ver >= "v6":   # v6 figures (year-labelled gaps, service level, delivery calendar)
                 subprocess.run([sys.executable, str(P.parent / "scripts" / "31_charts_v6.py")], check=True)

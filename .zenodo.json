@@ -1,0 +1,15 @@
+{
+  "title": "Demand forecasts versus a standing order for platelet ordering: a simulation study of public data from two hospitals, with a retrospectively registered analysis plan",
+  "upload_type": "software",
+  "description": "Code, result files and manuscript (draft v11) for an educational, advisory-only simulation study comparing demand forecasts with a standing order for platelet ordering. It uses only public aggregate data: daily platelet counts from University Hospital Aachen, 2008-2018 (Schilling et al., JMIR Med Inform 2022, CC BY 4.0) and the Stanford pip example data (GPL-2 or later). The analysis plan was registered retrospectively on OSF Registries on 14 November 2026, after the analyses were run (doi:10.17605/OSF.IO/PHQ42). Not a clinical tool and not ordering advice.",
+  "creators": [
+    {"name": "Dixon, Liam", "orcid": "0009-0003-0610-197X"}
+  ],
+  "license": "MIT",
+  "access_right": "open",
+  "keywords": ["platelet inventory", "demand forecasting", "waste", "simulation", "analysis plan", "public data", "blood bank"],
+  "related_identifiers": [
+    {"identifier": "10.17605/OSF.IO/PHQ42", "relation": "isSupplementTo", "scheme": "doi", "resource_type": "other"},
+    {"identifier": "10.2196/29978", "relation": "references", "scheme": "doi", "resource_type": "publication-article"}
+  ]
+}

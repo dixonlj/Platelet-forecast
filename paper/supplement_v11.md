@@ -12,7 +12,7 @@ title: "Supplement v11 to: Demand forecasts versus a standing order for platelet
 
 # S1. Deviations, clarifications and exploratory observations
 
-Analysis plan: `osf_preregistration_final.md` (final version time-stamped 04:04 US Eastern time, 14 November 2026) with its input manifest `osf_prereg_input_hashes.txt` (03:41). Analyses run 14 November 2026, 04:30 to 05:10 US Eastern time. These times are file time stamps on the analysis computer; they can be edited and are not independently verifiable, and the analysis code was written after the plan. The plan was registered retrospectively on OSF Registries after the analyses were run (submitted 14 November 2026; https://osf.io/phq42/) (1), \[OSF DOI -- pending; expected 10.17605/OSF.IO/PHQ42\]; this is deviation D8. The registration's title uses "planned"; the attached plan file keeps its original title so that its fingerprint is unchanged. A note listing D1--D8 is to be added to the registration by the author.
+Analysis plan: `osf_preregistration_final.md` (final version time-stamped 04:04 US Eastern time, 14 November 2026) with its input manifest `osf_prereg_input_hashes.txt` (03:41). Analyses run 14 November 2026, 04:30 to 05:10 US Eastern time. These times are file time stamps on the analysis computer; they can be edited and are not independently verifiable, and the analysis code was written after the plan. The plan was registered retrospectively on OSF Registries on 14 November 2026, after the analyses were run (https://osf.io/phq42/) (1), https://doi.org/10.17605/OSF.IO/PHQ42; this is deviation D8. The registration's title uses "planned"; the attached plan file keeps its original title so that its fingerprint is unchanged. A note listing D1--D8 is to be added to the registration by the author.
 
 ### S1.1 Deviations (the plan was not followed exactly)
 
@@ -25,7 +25,7 @@ Analysis plan: `osf_preregistration_final.md` (final version time-stamped 04:04 
 | D5 | Section 2.5, Stanford dGB: "script 27 feature construction". | Script 27's features were used: lags and the 7-day mean relative to the past-28-day mean, with the target relative to the past-28-day mean. The holiday flags are **US-California** holidays instead of NRW, as in S2-1. Forecasts are clipped at 0, as for S2-1 GB. | An NRW holiday calendar makes no sense for a US hospital. Clipping matches the S2-1 GB settings the plan names. | Before any Stanford simulation |
 | D6 | Section 5.2.3, life-on-arrival sweep "p3 = 0 to 1 in steps of 0.1". | The calibrated value is p3 = 0, which is the main scenario, so it was not run twice. The grid values p3 = 0.30 and 0.43 were run as named. | It would have duplicated the main scenario. | Before the primary results were seen |
 | D7 | Section 5.3, NHSBT monthly issues (optional exploratory check). | **Not used.** | It was optional, and nothing needed it. No file was downloaded. | --- |
-| D8 | Section 2.2 and the plan's front matter: register the plan on OSF before starting the analyses. | The plan was finalised (04:04 ET) and its inputs fingerprinted (03:41 ET) before the analyses (04:30--05:10 ET), but it was registered on OSF only after the analyses: a retrospective registration was submitted later on 14 November 2026. | An OSF draft was mistaken for a submitted registration. | Found after the analyses |
+| D8 | Section 2.2 and the plan's front matter: register the plan on OSF before starting the analyses. | The plan was finalised (04:04 ET) and its inputs fingerprinted (03:41 ET) before the analyses (04:30--05:10 ET), but it was registered on OSF only after the analyses: it was registered retrospectively later on 14 November 2026. | An OSF draft was mistaken for a submitted registration. | Found after the analyses |
 
 ### S1.2 Clarifications (how the plan's wording was put into code; not deviations)
 
@@ -162,4 +162,4 @@ All 2,700 combinations (5 calendars × 15 life-on-arrival mixes × 4 logging del
 
 # References
 
-1. Dixon L. Do demand forecasts reduce simulated platelet waste compared with a standing order? A calibrated, planned re-analysis of public data from a German university hospital, with a replication on public US data. OSF Registries, retrospective registration submitted 14 November 2026, after the analyses were run. https://osf.io/phq42/. \[OSF DOI -- pending; expected 10.17605/OSF.IO/PHQ42\]; 2026.
+1. Dixon L. Do demand forecasts reduce simulated platelet waste compared with a standing order? A calibrated, planned re-analysis of public data from a German university hospital, with a replication on public US data \[Internet\]. OSF Registries; registered retrospectively 14 November 2026, after the analyses were run; 2026. Available from: <https://osf.io/phq42/> doi:[10.17605/OSF.IO/PHQ42](https://doi.org/10.17605/OSF.IO/PHQ42)

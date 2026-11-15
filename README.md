@@ -11,7 +11,7 @@ A manuscript is in [`paper/`](paper/). **Draft v11** (latest) reports a pre-spec
 
 ## Latest: draft v11 (re-analysis per a written analysis plan)
 
-According to the author's file time stamps, the analysis plan ([`prereg/osf_preregistration_final.md`](prereg/osf_preregistration_final.md)) was finalised and its 35 inputs fingerprinted ([`prereg/osf_prereg_input_hashes.txt`](prereg/osf_prereg_input_hashes.txt)) before the analyses were run on 14 November 2026. Those time stamps cannot be independently verified, and the analysis code was written after the plan. A **retrospective** registration was submitted to OSF later the same day, **after** the analyses (https://osf.io/phq42/; OSF DOI pending). The paper states this as a limitation and as deviation D8. The file names keep the word "prereg" from when they were written; the registration itself is retrospective.
+According to the author's file time stamps, the analysis plan ([`prereg/osf_preregistration_final.md`](prereg/osf_preregistration_final.md)) was finalised and its 35 inputs fingerprinted ([`prereg/osf_prereg_input_hashes.txt`](prereg/osf_prereg_input_hashes.txt)) before the analyses were run on 14 November 2026. Those time stamps cannot be independently verified, and the analysis code was written after the plan. The plan was **registered retrospectively** on OSF later the same day, **after** the analyses: https://osf.io/phq42/, DOI [10.17605/OSF.IO/PHQ42](https://doi.org/10.17605/OSF.IO/PHQ42). The paper states this as a limitation and as deviation D8. The file names keep the word "prereg" from when they were written; the registration itself is retrospective.
 
 - **The calibrated simulation failed its own preset check.** Simulated waste was 5.22% against 9.74% recorded; emergency units per short day were 5.00 against 8.82; the weekday pattern missed its limit (TVD 0.226 against 0.20). Every result is conditional on that.
 - **Aachen: no forecast was shown to waste less than last year's standing order** (5.30% waste). SARIMA −0.33 points (95% CI −0.88 to +0.22), Chronos-Bolt −0.12, detrended gradient boosting +0.07, gradient boosting +0.17. None was shown to be equivalent either.
@@ -221,6 +221,6 @@ paper/             draft v10 (sources, Word, PDF), journal plan, deviations, OSF
 
 - **Code:** MIT licence (see `LICENSE`).
 - **Data:** CC BY 4.0, Schilling et al. 2022 (see above).
-- **Citation:** if you use this work, please cite it using `CITATION.cff` and also cite the data source. A Zenodo DOI will be added when the archive is released. The OSF registration is at https://osf.io/phq42/ (retrospective; DOI pending).
+- **Citation:** if you use this work, please cite it using `CITATION.cff` and also cite the data source. A Zenodo DOI will be added when the archive is released. The analysis plan is registered (retrospectively) on OSF: https://doi.org/10.17605/OSF.IO/PHQ42.
 
 Author: Liam Dixon, independent researcher ([ORCID 0009-0003-0610-197X](https://orcid.org/0009-0003-0610-197X)). Personal, educational project, not funded or endorsed by any employer.

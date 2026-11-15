@@ -40,3 +40,7 @@ Rec2 (cushion set in advance in the main text), Rec3 (k matched on the test year
 - `scripts/45_check_v11_numbers.py` (new) and `paper/refcheck/v11_number_check.md` (its output).
 - `paper/doi_placeholders.md` (new): every place to swap when the DOIs exist.
 - Outputs: `paper/draft_v11.src.md`, `.md`, `.docx`, `.pdf`, `_layout.docx`, `_layout.pdf`; the same for `supplement_v11`.
+
+## Update, 14 November 2026 (evening): OSF DOI swapped in
+
+The OSF registration was approved and made public, so every `[OSF DOI – pending; expected 10.17605/OSF.IO/PHQ42]` placeholder was replaced with https://doi.org/10.17605/OSF.IO/PHQ42, and "submitted 14 November 2026" now reads "registered retrospectively on 14 November 2026": title-page line, §2.1, Table 3 D8 and Statements in the draft; S1 introduction and S1.1 D8 in the supplement; `references.bib` (`dixon2026prereg` now has `doi` and `url` fields); README. The Zenodo DOI is still a placeholder. Added `vancouver.csl` (paper/), `CITATION.cff` (updated to the v11 title, MIT, OSF DOI as identifier) and `.zenodo.json`. No numbers changed.

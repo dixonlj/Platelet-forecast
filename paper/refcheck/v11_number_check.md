@@ -71,7 +71,7 @@ Draft: `paper/draft_v11.src.md`. Run by `scripts/45_check_v11_numbers.py`.
 | 63 | Table from results is current: validation_v10.md | regenerated and compared | `scripts/43_tables_v10.py` | yes |
 | 64 | Table from results is current: secondary_v10.md | regenerated and compared | `scripts/43_tables_v10.py` | yes |
 
-**Part B: 317 numeric tokens in the abstract, body, captions and Table 3; 0 not tied to a check or a listed design constant.**
+**Part B: 318 numeric tokens in the abstract, body, captions and Table 3; 0 not tied to a check or a listed design constant.**
 
 Uncovered tokens: none
 
@@ -95,6 +95,7 @@ Design constants and cited facts (not results), with their source:
 - `14`: registration date (14 November 2026); AI use 13–14 November 2026
 - `13`: AI use 13–14 November 2026
 - `37`: scripts 37–42 (analysis code file names)
+- `10.17605`: DOI prefix of the OSF registration (10.17605/OSF.IO/PHQ42)
 - `03:41`: input manifest time stamp (file mtime of paper/osf_prereg_input_hashes.txt)
 - `04:04`: final plan time stamp (file mtime of paper/osf_preregistration_final.md)
 - `04:30`: analysis run window (prereg_deviations.md)
