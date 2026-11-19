@@ -1,0 +1,24 @@
+# SHA-256 manifest of files prepared for the Study 2 OSF pre-registration.
+# Generated 19 November 2026 (America/New_York).
+# Paths below are file names in study2/prereg/osf_upload/, except the NHSBT snapshot,
+# which is listed last and is NOT included in this folder or in the registration.
+# NHSBT has printed no open licence for redistribution, so the spreadsheet itself
+# must not be uploaded to OSF, a preprint, or a public repository.
+#
+# Attach to the registration:
+#   osf_prereg_study2_v3.pdf          -> Study design
+#   SHA256SUMS.txt                   -> Data collection procedures (this file)
+#   nhsbt_analysis.py, inference.py,
+#   FROZEN_CODE.sha256               -> Statistical models
+# Do not attach osf_paste_sheet_study2.md (form-filling aid only) or the spreadsheet.
+#
+986fb521cd763499560cfc6fc1859c1aa093fd293d8f67bf437913d782924a4d  osf_prereg_study2_v3.pdf
+dcb2f18cf590505db266574b317368cf2d719126644e6d2f064aaf07404354ac  nhsbt_analysis.py
+0e5248d473a0bb216f1d1e20d7536f0c3401b4e04e11bb3033f66a0528e0bf64  inference.py
+e1e20b897257872703fe24af52724c7d02ed0ba0bcf5d6c17f9c399fb00a2008  FROZEN_CODE.sha256
+a251a00e74c7c7529f699a28531c4c95cfd15352291d47f58a034a0b072ccc03  osf_paste_sheet_study2.md
+
+# NHSBT dated snapshot (NOT UPLOADED; no licence for redistribution).
+# Official source: https://www.nhsbt.nhs.uk/who-we-are/transparency/parliamentary-questions/
+# Local path (gitignored, not in this folder): study2/data/public/NHSBT_issues_2016-2025_snapshot_2026-11-18.xlsx
+f0e3fbc52250d210bfa5bbf655063759b079cb6eebbe0ccee75326c0eab4e696  NHSBT_issues_2016-2025_snapshot_2026-11-18.xlsx

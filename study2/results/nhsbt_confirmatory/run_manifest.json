@@ -1,0 +1,36 @@
+{
+  "data_label": "NHSBT",
+  "input_file": "/workspace/platelet-forecast/study2/data/public/NHSBT_issues_2016-2025_snapshot_2026-11-18.xlsx",
+  "input_sha256": "f0e3fbc52250d210bfa5bbf655063759b079cb6eebbe0ccee75326c0eab4e696",
+  "months": [
+    "2016-04",
+    "2025-10",
+    115
+  ],
+  "columns": [
+    "Month",
+    "Red Blood Cells",
+    "Platelets",
+    "Fresh Frozen Plasma",
+    "Cryoprecipitate"
+  ],
+  "seed": 20261118,
+  "n_boot": 10000,
+  "python": "3.13.5",
+  "software": {
+    "statsmodels": "0.15.0",
+    "numpy": "2.5.5",
+    "scipy": "1.18.1",
+    "openpyxl": "3.1.5"
+  },
+  "script_sha256": {
+    "nhsbt_analysis.py": "dcb2f18cf590505db266574b317368cf2d719126644e6d2f064aaf07404354ac",
+    "inference.py": "0e5248d473a0bb216f1d1e20d7536f0c3401b4e04e11bb3033f66a0528e0bf64"
+  },
+  "run_at": "2026-11-19T11:49:58-05:00",
+  "osf_registration": "https://osf.io/vrh2u/",
+  "frozen_code_verified": {
+    "nhsbt_analysis.py": "dcb2f18cf590505db266574b317368cf2d719126644e6d2f064aaf07404354ac",
+    "inference.py": "0e5248d473a0bb216f1d1e20d7536f0c3401b4e04e11bb3033f66a0528e0bf64"
+  }
+}

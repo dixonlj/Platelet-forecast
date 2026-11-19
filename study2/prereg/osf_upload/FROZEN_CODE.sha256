@@ -1,0 +1,5 @@
+# Expected SHA-256 of the frozen Study 2 code (sha256sum format).
+# Read by nhsbt_analysis.py --nhsbt, which must also find the same values in
+# osf_prereg_study2_draft_v3.md line 119. Check by hand: sha256sum -c FROZEN_CODE.sha256
+dcb2f18cf590505db266574b317368cf2d719126644e6d2f064aaf07404354ac  nhsbt_analysis.py
+0e5248d473a0bb216f1d1e20d7536f0c3401b4e04e11bb3033f66a0528e0bf64  inference.py

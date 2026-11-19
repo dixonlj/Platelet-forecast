@@ -1,0 +1,27 @@
+run,product,method,n_origins,n_ets_holtwinters,omitted_share,reliability,n_primary,fallback_share,n_no_shift,n_with_shift,n_ets_statespace,n_omitted,n_fallback
+primary,platelets,ets,36,36,0.0,ok,,,,,,,
+primary,platelets,sarima,36,,0.0,ok,36,0.0,,,,,
+primary,platelets,regression,36,,,ok,,,36,,,,
+primary,red_cells,ets,36,36,0.0,ok,,,,,,,
+primary,red_cells,sarima,36,,0.0,ok,36,0.0,,,,,
+primary,red_cells,regression,36,,,ok,,,36,,,,
+primary,red_cells,regression_shift,36,,,ok,,,21,15,,,
+primary,ffp,ets,36,36,0.0,ok,,,,,,,
+primary,ffp,sarima,36,,0.0,ok,36,0.0,,,,,
+primary,ffp,regression,36,,,ok,,,36,,,,
+primary,cryo,ets,36,36,0.0,ok,,,,,,,
+primary,cryo,sarima,36,,0.0,ok,36,0.0,,,,,
+primary,cryo,regression,36,,,ok,,,36,,,,
+covid_sensitivity,platelets,ets,36,,0.05555555555555555,ok,,,,,34,2,
+covid_sensitivity,platelets,sarima,36,,0.0,ok,25,0.3055555555555556,,,,,11
+covid_sensitivity,platelets,regression,36,,,ok,,,36,,,,
+covid_sensitivity,red_cells,ets,36,,0.6666666666666666,treat as unreliable (more than half of origins omitted (fit failed)),,,,,12,24,
+covid_sensitivity,red_cells,sarima,36,,0.0,ok,25,0.3055555555555556,,,,,11
+covid_sensitivity,red_cells,regression,36,,,ok,,,36,,,,
+covid_sensitivity,red_cells,regression_shift,36,,,ok,,,21,15,,,
+covid_sensitivity,ffp,ets,36,,0.3333333333333333,ok,,,,,24,12,
+covid_sensitivity,ffp,sarima,36,,0.0,ok,26,0.2777777777777778,,,,,10
+covid_sensitivity,ffp,regression,36,,,ok,,,36,,,,
+covid_sensitivity,cryo,ets,36,,0.0,ok,,,,,36,,
+covid_sensitivity,cryo,sarima,36,,0.0,ok,27,0.25,,,,,9
+covid_sensitivity,cryo,regression,36,,,ok,,,36,,,,

@@ -1,0 +1,198 @@
+run,product,method,origin,spec,category,message,counts_as_failure
+covid_sensitivity,platelets,sarima,2022-10,sarima_primary,EstimationWarning,Too few observations to estimate starting parameters for seasonal ARMA. All parameters except for variances will be set to zeros.,False
+covid_sensitivity,platelets,sarima,2022-11,sarima_primary,EstimationWarning,Too few observations to estimate starting parameters for seasonal ARMA. All parameters except for variances will be set to zeros.,False
+covid_sensitivity,platelets,sarima,2022-12,sarima_primary,EstimationWarning,Too few observations to estimate starting parameters for seasonal ARMA. All parameters except for variances will be set to zeros.,False
+covid_sensitivity,platelets,sarima,2023-01,sarima_primary,EstimationWarning,Too few observations to estimate starting parameters for seasonal ARMA. All parameters except for variances will be set to zeros.,False
+covid_sensitivity,platelets,sarima,2023-02,sarima_primary,EstimationWarning,Too few observations to estimate starting parameters for seasonal ARMA. All parameters except for variances will be set to zeros.,False
+covid_sensitivity,platelets,sarima,2023-03,sarima_primary,EstimationWarning,Too few observations to estimate starting parameters for seasonal ARMA. All parameters except for variances will be set to zeros.,False
+covid_sensitivity,platelets,sarima,2023-05,sarima_primary,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,platelets,sarima,2023-05,sarima_primary,mle_retvals,converged=False,True
+covid_sensitivity,platelets,sarima,2023-06,sarima_primary,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,platelets,sarima,2023-06,sarima_primary,mle_retvals,converged=False,True
+covid_sensitivity,platelets,sarima,2023-07,sarima_primary,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,platelets,sarima,2023-07,sarima_primary,mle_retvals,converged=False,True
+covid_sensitivity,platelets,sarima,2023-08,sarima_primary,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,platelets,sarima,2023-08,sarima_primary,mle_retvals,converged=False,True
+covid_sensitivity,platelets,sarima,2023-09,sarima_primary,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,platelets,sarima,2023-09,sarima_primary,mle_retvals,converged=False,True
+covid_sensitivity,platelets,sarima,2023-10,sarima_primary,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,platelets,sarima,2023-10,sarima_primary,mle_retvals,converged=False,True
+covid_sensitivity,platelets,sarima,2023-11,sarima_primary,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,platelets,sarima,2023-11,sarima_primary,mle_retvals,converged=False,True
+covid_sensitivity,platelets,sarima,2023-12,sarima_primary,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,platelets,sarima,2023-12,sarima_primary,mle_retvals,converged=False,True
+covid_sensitivity,platelets,sarima,2024-01,sarima_primary,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,platelets,sarima,2024-01,sarima_primary,mle_retvals,converged=False,True
+covid_sensitivity,platelets,sarima,2024-02,sarima_primary,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,platelets,sarima,2024-02,sarima_primary,mle_retvals,converged=False,True
+covid_sensitivity,platelets,sarima,2024-03,sarima_primary,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,platelets,sarima,2024-03,sarima_primary,mle_retvals,converged=False,True
+covid_sensitivity,platelets,ets,2024-06,ets_statespace,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,platelets,ets,2024-06,ets_statespace,mle_retvals,converged=False,True
+covid_sensitivity,platelets,ets,2025-03,ets_statespace,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,platelets,ets,2025-03,ets_statespace,mle_retvals,converged=False,True
+covid_sensitivity,red_cells,ets,2022-10,ets_statespace,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,red_cells,ets,2022-10,ets_statespace,mle_retvals,converged=False,True
+covid_sensitivity,red_cells,sarima,2022-10,sarima_primary,EstimationWarning,Too few observations to estimate starting parameters for seasonal ARMA. All parameters except for variances will be set to zeros.,False
+covid_sensitivity,red_cells,sarima,2022-11,sarima_primary,EstimationWarning,Too few observations to estimate starting parameters for seasonal ARMA. All parameters except for variances will be set to zeros.,False
+covid_sensitivity,red_cells,ets,2022-12,ets_statespace,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,red_cells,ets,2022-12,ets_statespace,mle_retvals,converged=False,True
+covid_sensitivity,red_cells,sarima,2022-12,sarima_primary,EstimationWarning,Too few observations to estimate starting parameters for seasonal ARMA. All parameters except for variances will be set to zeros.,False
+covid_sensitivity,red_cells,sarima,2023-01,sarima_primary,EstimationWarning,Too few observations to estimate starting parameters for seasonal ARMA. All parameters except for variances will be set to zeros.,False
+covid_sensitivity,red_cells,ets,2023-02,ets_statespace,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,red_cells,ets,2023-02,ets_statespace,mle_retvals,converged=False,True
+covid_sensitivity,red_cells,sarima,2023-02,sarima_primary,EstimationWarning,Too few observations to estimate starting parameters for seasonal ARMA. All parameters except for variances will be set to zeros.,False
+covid_sensitivity,red_cells,ets,2023-03,ets_statespace,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,red_cells,ets,2023-03,ets_statespace,mle_retvals,converged=False,True
+covid_sensitivity,red_cells,sarima,2023-03,sarima_primary,EstimationWarning,Too few observations to estimate starting parameters for seasonal ARMA. All parameters except for variances will be set to zeros.,False
+covid_sensitivity,red_cells,sarima,2023-04,sarima_primary,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,red_cells,sarima,2023-04,sarima_primary,mle_retvals,converged=False,True
+covid_sensitivity,red_cells,ets,2023-05,ets_statespace,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,red_cells,ets,2023-05,ets_statespace,mle_retvals,converged=False,True
+covid_sensitivity,red_cells,sarima,2023-05,sarima_primary,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,red_cells,sarima,2023-05,sarima_primary,mle_retvals,converged=False,True
+covid_sensitivity,red_cells,ets,2023-06,ets_statespace,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,red_cells,ets,2023-06,ets_statespace,mle_retvals,converged=False,True
+covid_sensitivity,red_cells,sarima,2023-06,sarima_primary,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,red_cells,sarima,2023-06,sarima_primary,mle_retvals,converged=False,True
+covid_sensitivity,red_cells,sarima,2023-07,sarima_primary,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,red_cells,sarima,2023-07,sarima_primary,mle_retvals,converged=False,True
+covid_sensitivity,red_cells,ets,2023-08,ets_statespace,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,red_cells,ets,2023-08,ets_statespace,mle_retvals,converged=False,True
+covid_sensitivity,red_cells,sarima,2023-08,sarima_primary,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,red_cells,sarima,2023-08,sarima_primary,mle_retvals,converged=False,True
+covid_sensitivity,red_cells,ets,2023-09,ets_statespace,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,red_cells,ets,2023-09,ets_statespace,mle_retvals,converged=False,True
+covid_sensitivity,red_cells,sarima,2023-09,sarima_primary,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,red_cells,sarima,2023-09,sarima_primary,mle_retvals,converged=False,True
+covid_sensitivity,red_cells,ets,2023-10,ets_statespace,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,red_cells,ets,2023-10,ets_statespace,mle_retvals,converged=False,True
+covid_sensitivity,red_cells,sarima,2023-11,sarima_primary,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,red_cells,sarima,2023-11,sarima_primary,mle_retvals,converged=False,True
+covid_sensitivity,red_cells,ets,2023-12,ets_statespace,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,red_cells,ets,2023-12,ets_statespace,mle_retvals,converged=False,True
+covid_sensitivity,red_cells,sarima,2023-12,sarima_primary,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,red_cells,sarima,2023-12,sarima_primary,mle_retvals,converged=False,True
+covid_sensitivity,red_cells,sarima,2024-01,sarima_primary,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,red_cells,sarima,2024-01,sarima_primary,mle_retvals,converged=False,True
+covid_sensitivity,red_cells,ets,2024-02,ets_statespace,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,red_cells,ets,2024-02,ets_statespace,mle_retvals,converged=False,True
+covid_sensitivity,red_cells,sarima,2024-02,sarima_primary,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,red_cells,sarima,2024-02,sarima_primary,mle_retvals,converged=False,True
+covid_sensitivity,red_cells,ets,2024-03,ets_statespace,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,red_cells,ets,2024-03,ets_statespace,mle_retvals,converged=False,True
+covid_sensitivity,red_cells,sarima,2024-03,sarima_primary,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,red_cells,sarima,2024-03,sarima_primary,mle_retvals,converged=False,True
+covid_sensitivity,red_cells,ets,2024-05,ets_statespace,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,red_cells,ets,2024-05,ets_statespace,mle_retvals,converged=False,True
+covid_sensitivity,red_cells,ets,2024-06,ets_statespace,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,red_cells,ets,2024-06,ets_statespace,mle_retvals,converged=False,True
+covid_sensitivity,red_cells,ets,2024-07,ets_statespace,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,red_cells,ets,2024-07,ets_statespace,mle_retvals,converged=False,True
+covid_sensitivity,red_cells,ets,2024-08,ets_statespace,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,red_cells,ets,2024-08,ets_statespace,mle_retvals,converged=False,True
+covid_sensitivity,red_cells,ets,2024-10,ets_statespace,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,red_cells,ets,2024-10,ets_statespace,mle_retvals,converged=False,True
+covid_sensitivity,red_cells,ets,2024-11,ets_statespace,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,red_cells,ets,2024-11,ets_statespace,mle_retvals,converged=False,True
+covid_sensitivity,red_cells,ets,2025-01,ets_statespace,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,red_cells,ets,2025-01,ets_statespace,mle_retvals,converged=False,True
+covid_sensitivity,red_cells,ets,2025-03,ets_statespace,RuntimeWarning,overflow encountered in exp,False
+covid_sensitivity,red_cells,ets,2025-03,ets_statespace,RuntimeWarning,overflow encountered in exp,False
+covid_sensitivity,red_cells,ets,2025-03,ets_statespace,RuntimeWarning,overflow encountered in exp,False
+covid_sensitivity,red_cells,ets,2025-03,ets_statespace,RuntimeWarning,overflow encountered in exp,False
+covid_sensitivity,red_cells,ets,2025-03,ets_statespace,RuntimeWarning,overflow encountered in exp,False
+covid_sensitivity,red_cells,ets,2025-03,ets_statespace,RuntimeWarning,overflow encountered in exp,False
+covid_sensitivity,red_cells,ets,2025-03,ets_statespace,RuntimeWarning,overflow encountered in exp,False
+covid_sensitivity,red_cells,ets,2025-03,ets_statespace,RuntimeWarning,overflow encountered in exp,False
+covid_sensitivity,red_cells,ets,2025-03,ets_statespace,RuntimeWarning,overflow encountered in exp,False
+covid_sensitivity,red_cells,ets,2025-03,ets_statespace,RuntimeWarning,overflow encountered in exp,False
+covid_sensitivity,red_cells,ets,2025-03,ets_statespace,RuntimeWarning,overflow encountered in exp,False
+covid_sensitivity,red_cells,ets,2025-03,ets_statespace,RuntimeWarning,overflow encountered in exp,False
+covid_sensitivity,red_cells,ets,2025-03,ets_statespace,RuntimeWarning,overflow encountered in exp,False
+covid_sensitivity,red_cells,ets,2025-03,ets_statespace,RuntimeWarning,overflow encountered in exp,False
+covid_sensitivity,red_cells,ets,2025-03,ets_statespace,RuntimeWarning,overflow encountered in exp,False
+covid_sensitivity,red_cells,ets,2025-03,ets_statespace,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,red_cells,ets,2025-03,ets_statespace,mle_retvals,converged=False,True
+covid_sensitivity,red_cells,ets,2025-04,ets_statespace,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,red_cells,ets,2025-04,ets_statespace,mle_retvals,converged=False,True
+covid_sensitivity,red_cells,ets,2025-05,ets_statespace,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,red_cells,ets,2025-05,ets_statespace,mle_retvals,converged=False,True
+covid_sensitivity,red_cells,ets,2025-06,ets_statespace,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,red_cells,ets,2025-06,ets_statespace,mle_retvals,converged=False,True
+covid_sensitivity,red_cells,ets,2025-07,ets_statespace,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,red_cells,ets,2025-07,ets_statespace,mle_retvals,converged=False,True
+covid_sensitivity,ffp,ets,2022-10,ets_statespace,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,ffp,ets,2022-10,ets_statespace,mle_retvals,converged=False,True
+covid_sensitivity,ffp,sarima,2022-10,sarima_primary,EstimationWarning,Too few observations to estimate starting parameters for seasonal ARMA. All parameters except for variances will be set to zeros.,False
+covid_sensitivity,ffp,sarima,2022-11,sarima_primary,EstimationWarning,Too few observations to estimate starting parameters for seasonal ARMA. All parameters except for variances will be set to zeros.,False
+covid_sensitivity,ffp,sarima,2022-12,sarima_primary,EstimationWarning,Too few observations to estimate starting parameters for seasonal ARMA. All parameters except for variances will be set to zeros.,False
+covid_sensitivity,ffp,sarima,2023-01,sarima_primary,EstimationWarning,Too few observations to estimate starting parameters for seasonal ARMA. All parameters except for variances will be set to zeros.,False
+covid_sensitivity,ffp,sarima,2023-02,sarima_primary,EstimationWarning,Too few observations to estimate starting parameters for seasonal ARMA. All parameters except for variances will be set to zeros.,False
+covid_sensitivity,ffp,sarima,2023-03,sarima_primary,EstimationWarning,Too few observations to estimate starting parameters for seasonal ARMA. All parameters except for variances will be set to zeros.,False
+covid_sensitivity,ffp,sarima,2023-05,sarima_primary,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,ffp,sarima,2023-05,sarima_primary,mle_retvals,converged=False,True
+covid_sensitivity,ffp,sarima,2023-06,sarima_primary,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,ffp,sarima,2023-06,sarima_primary,mle_retvals,converged=False,True
+covid_sensitivity,ffp,sarima,2023-07,sarima_primary,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,ffp,sarima,2023-07,sarima_primary,mle_retvals,converged=False,True
+covid_sensitivity,ffp,sarima,2023-08,sarima_primary,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,ffp,sarima,2023-08,sarima_primary,mle_retvals,converged=False,True
+covid_sensitivity,ffp,ets,2023-09,ets_statespace,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,ffp,ets,2023-09,ets_statespace,mle_retvals,converged=False,True
+covid_sensitivity,ffp,sarima,2023-10,sarima_primary,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,ffp,sarima,2023-10,sarima_primary,mle_retvals,converged=False,True
+covid_sensitivity,ffp,ets,2023-11,ets_statespace,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,ffp,ets,2023-11,ets_statespace,mle_retvals,converged=False,True
+covid_sensitivity,ffp,sarima,2023-11,sarima_primary,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,ffp,sarima,2023-11,sarima_primary,mle_retvals,converged=False,True
+covid_sensitivity,ffp,ets,2023-12,ets_statespace,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,ffp,ets,2023-12,ets_statespace,mle_retvals,converged=False,True
+covid_sensitivity,ffp,sarima,2023-12,sarima_primary,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,ffp,sarima,2023-12,sarima_primary,mle_retvals,converged=False,True
+covid_sensitivity,ffp,ets,2024-01,ets_statespace,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,ffp,ets,2024-01,ets_statespace,mle_retvals,converged=False,True
+covid_sensitivity,ffp,sarima,2024-01,sarima_primary,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,ffp,sarima,2024-01,sarima_primary,mle_retvals,converged=False,True
+covid_sensitivity,ffp,ets,2024-02,ets_statespace,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,ffp,ets,2024-02,ets_statespace,mle_retvals,converged=False,True
+covid_sensitivity,ffp,sarima,2024-02,sarima_primary,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,ffp,sarima,2024-02,sarima_primary,mle_retvals,converged=False,True
+covid_sensitivity,ffp,sarima,2024-03,sarima_primary,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,ffp,sarima,2024-03,sarima_primary,mle_retvals,converged=False,True
+covid_sensitivity,ffp,ets,2024-06,ets_statespace,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,ffp,ets,2024-06,ets_statespace,mle_retvals,converged=False,True
+covid_sensitivity,ffp,ets,2024-11,ets_statespace,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,ffp,ets,2024-11,ets_statespace,mle_retvals,converged=False,True
+covid_sensitivity,ffp,ets,2025-02,ets_statespace,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,ffp,ets,2025-02,ets_statespace,mle_retvals,converged=False,True
+covid_sensitivity,ffp,ets,2025-06,ets_statespace,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,ffp,ets,2025-06,ets_statespace,mle_retvals,converged=False,True
+covid_sensitivity,ffp,ets,2025-07,ets_statespace,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,ffp,ets,2025-07,ets_statespace,mle_retvals,converged=False,True
+covid_sensitivity,ffp,ets,2025-09,ets_statespace,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,ffp,ets,2025-09,ets_statespace,mle_retvals,converged=False,True
+covid_sensitivity,cryo,sarima,2022-10,sarima_primary,EstimationWarning,Too few observations to estimate starting parameters for seasonal ARMA. All parameters except for variances will be set to zeros.,False
+covid_sensitivity,cryo,sarima,2022-11,sarima_primary,EstimationWarning,Too few observations to estimate starting parameters for seasonal ARMA. All parameters except for variances will be set to zeros.,False
+covid_sensitivity,cryo,sarima,2022-12,sarima_primary,EstimationWarning,Too few observations to estimate starting parameters for seasonal ARMA. All parameters except for variances will be set to zeros.,False
+covid_sensitivity,cryo,sarima,2023-01,sarima_primary,EstimationWarning,Too few observations to estimate starting parameters for seasonal ARMA. All parameters except for variances will be set to zeros.,False
+covid_sensitivity,cryo,sarima,2023-02,sarima_primary,EstimationWarning,Too few observations to estimate starting parameters for seasonal ARMA. All parameters except for variances will be set to zeros.,False
+covid_sensitivity,cryo,sarima,2023-03,sarima_primary,EstimationWarning,Too few observations to estimate starting parameters for seasonal ARMA. All parameters except for variances will be set to zeros.,False
+covid_sensitivity,cryo,sarima,2023-05,sarima_primary,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,cryo,sarima,2023-05,sarima_primary,mle_retvals,converged=False,True
+covid_sensitivity,cryo,sarima,2023-06,sarima_primary,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,cryo,sarima,2023-06,sarima_primary,mle_retvals,converged=False,True
+covid_sensitivity,cryo,sarima,2023-07,sarima_primary,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,cryo,sarima,2023-07,sarima_primary,mle_retvals,converged=False,True
+covid_sensitivity,cryo,sarima,2023-08,sarima_primary,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,cryo,sarima,2023-08,sarima_primary,mle_retvals,converged=False,True
+covid_sensitivity,cryo,sarima,2023-09,sarima_primary,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,cryo,sarima,2023-09,sarima_primary,mle_retvals,converged=False,True
+covid_sensitivity,cryo,sarima,2023-10,sarima_primary,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,cryo,sarima,2023-10,sarima_primary,mle_retvals,converged=False,True
+covid_sensitivity,cryo,sarima,2023-12,sarima_primary,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,cryo,sarima,2023-12,sarima_primary,mle_retvals,converged=False,True
+covid_sensitivity,cryo,sarima,2024-02,sarima_primary,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,cryo,sarima,2024-02,sarima_primary,mle_retvals,converged=False,True
+covid_sensitivity,cryo,sarima,2024-03,sarima_primary,ConvergenceWarning,Maximum Likelihood optimization failed to converge. Check mle_retvals,True
+covid_sensitivity,cryo,sarima,2024-03,sarima_primary,mle_retvals,converged=False,True

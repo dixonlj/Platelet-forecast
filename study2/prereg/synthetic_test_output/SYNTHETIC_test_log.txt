@@ -1,0 +1,96 @@
+SYNTHETIC TEST: made-up workbook written; the NHSBT snapshot is not opened in this mode.
+[1] Loader
+  PASS  115 months, Apr 2016 - Oct 2025
+  PASS  values round-trip through the sheet
+  PASS  loader refuses a sheet with a missing month
+[2] Units per day
+  PASS  Feb 2020 divided by 29 (leap year)
+  PASS  Feb 2019 divided by 28
+  PASS  Jan 2020 divided by 31
+[3] Full pipeline on made-up data (all runs, products, horizons, sensitivities)
+  PASS  target counts per horizon 36/35/34 (got 36/35/34)
+  PASS  1-month targets Nov 2022 - Oct 2025
+  PASS  3-month targets Jan 2023 - Oct 2025
+  PASS  output SYNTHETIC_forecasts_long.csv written
+  PASS  output SYNTHETIC_accuracy.csv written
+  PASS  output SYNTHETIC_comparisons_vs_naive.csv written
+  PASS  output SYNTHETIC_dm_lag2_check.csv written
+  PASS  output SYNTHETIC_naive_2021_vs_2019.csv written
+  PASS  output SYNTHETIC_fit_summary.csv written
+  PASS  output SYNTHETIC_fit_warning_log.csv written
+  PASS  output SYNTHETIC_primary_result.md written
+  PASS  manifest labelled SYNTHETIC, input is the made-up file
+  PASS  Holm and the joint verdict were applied to exactly 3 confirmatory rows
+  PASS  every other comparison is descriptive
+  PASS  primary + COVID sensitivity for all 4 products
+  PASS  Sep-Oct 2025 drop and red-cell split/start-Apr-2024 sets present
+  PASS  Sep-Oct 2025 sensitivity scores 34 one-month targets ending Aug 2025
+  PASS  red-cell regression is reported both with and without the April 2024 shift
+  PASS  secondary metrics computed
+[4] Pairing by target month (N2)
+  PASS  dropping one ETS forecast leaves 35 pairs and reports the dropped month
+  PASS  kept months are in time order and exclude the dropped month
+  PASS  paired MAE difference equals the month-by-month hand calculation
+        (by-month diff -8.723; old position-based diff would have been -8.262)
+  PASS  positional helper refuses unequal-length lists
+  PASS  DM-HLN uses the same 35 month-matched pairs
+[5] COVID rules
+  PASS  sensitivity naive for Nov 2022 = Nov 2019
+  PASS  sensitivity naive for Dec 2022 = Dec 2019
+  PASS  sensitivity naive for Jan 2023 = Jan 2022 (outside window)
+  PASS  primary naive for Nov 2022 = Nov 2021
+  PASS  COVID-dropped regression uses real time positions (exact on a noise-free series)
+  PASS  renumbered time (the v2 bug) would NOT recover it
+[6] Red-cell April 2024 shift rule
+  PASS  no shift when training ends June 2024
+  PASS  shift used when training includes July 2024
+  PASS  shift used at exactly the 15 origins from July 2024; never in the no-shift variant
+[7] Holm, verdict and 7 units/day label
+  PASS  Holm (0.01, 0.02, 0.04): all rejected, adjusted 0.03/0.04/0.04
+  PASS  Holm (0.01, 0.03, 0.04): only the first rejected
+  PASS  non-computable p is treated as 1, never rejected
+  PASS  both agree, interval below zero -> lower MAE
+  PASS  Holm not rejected -> couldn't tell apart
+  PASS  interval includes 0 -> couldn't tell apart
+  PASS  test not computable -> couldn't tell apart
+  PASS  both agree, interval above zero -> naive better
+  PASS  diff -10, CI -15 to -8 -> practically meaningful
+  PASS  diff -10, CI includes -4 -> may be smaller than what matters
+  PASS  diff -3 -> below the smallest meaningful difference
+  PASS  no verdict -> no practical claim
+  PASS  naive better by 10, CI 8 to 15 -> 'worse, practically meaningful'
+  PASS  naive better by 10, CI 4 to 15 -> may be smaller than what matters
+[8] Fit failure rule and fallback
+  PASS  forced primary failure -> fallback with constant
+  PASS  the failure is kept in the log
+  PASS  mle_retvals['converged'] False -> failure
+  PASS  ConvergenceWarning -> failure, warning logged
+  PASS  converged, no warnings -> primary kept
+  PASS  warning rule (c) 'failed to'+'optim' and a harmless warning
+  PASS  SARIMA fallback counted per origin (36 origins per run/product)
+  PASS  SARIMA fallback share, omitted share and >50% reliability label reported
+        SARIMA fallback shares: primary/platelets=0.00, primary/red_cells=0.00, primary/ffp=0.00, primary/cryo=0.00, covid_sensitivity/platelets=0.25, covid_sensitivity/red_cells=0.28, covid_sensitivity/ffp=0.31, covid_sensitivity/cryo=0.31
+[9] Circular block bootstrap
+  PASS  every month equally likely (n=10, block 5)
+  PASS  seeded bootstrap is reproducible
+[10] NHSBT guard
+  PASS  --nhsbt refuses without an https://osf.io/ registration URL
+  PASS  frozen-code check: both scripts match FROZEN_CODE.sha256 and the plan
+  PASS  an edited inference.py is refused (hash mismatch stop)
+  PASS  a manifest that disagrees with the code is refused
+  PASS  snapshot hash mismatch stops the run
+[11] Unreliable rule for omitted fits (ETS and SARIMA)
+  PASS  ETS omitted at 19 of 36 origins -> unreliable
+  PASS  exactly half omitted (18 of 36) -> not labelled unreliable
+  PASS  pipeline ETS reliability label matches the omitted share for every run/product
+        ETS omitted shares: primary/platelets=0.00, primary/red_cells=0.00, primary/ffp=0.00, primary/cryo=0.00, covid_sensitivity/platelets=0.00, covid_sensitivity/red_cells=0.69, covid_sensitivity/ffp=0.00, covid_sensitivity/cryo=0.11
+  PASS  made-up red-cell COVID-sensitivity ETS (most origins omitted) is labelled unreliable in every comparison row
+  PASS  every comparison row carries the method's reliability label
+  PASS  every comparison row shows n_paired and paired-month MAEs
+[12] ETS failure at one origin omits all its horizons
+  PASS  origin Jun 2023 failed -> ETS has no Jul/Aug/Sep 2023 forecast from it at h=1/2/3; naive still does
+  PASS  ETS counts drop by one at each horizon
+  PASS  the omitted origin is counted once and logged
+  PASS  h=2 comparison pairs 34 months and reports Aug 2023 dropped
+
+SYNTHETIC TEST: 78 passed, 0 failed. NHSBT file was not read.

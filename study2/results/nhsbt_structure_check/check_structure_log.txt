@@ -1,0 +1,6 @@
+--check-structure run at 2026-11-19T00:19:01-05:00
+script SHA-256 nhsbt_analysis.py dcb2f18cf590505db266574b317368cf2d719126644e6d2f064aaf07404354ac; inference.py 0e5248d473a0bb216f1d1e20d7536f0c3401b4e04e11bb3033f66a0528e0bf64
+snapshot NHSBT_issues_2016-2025_snapshot_2026-11-18.xlsx SHA-256 f0e3fbc52250d210bfa5bbf655063759b079cb6eebbe0ccee75326c0eab4e696 (matches the plan)
+sheet 'Blood Products Issued by Month'; columns ['Month', 'Red Blood Cells', 'Platelets', 'Fresh Frozen Plasma', 'Cryoprecipitate']
+115 months, first 2016-04, last 2025-10, no gaps; all 4 product columns numeric and positive
+No data values were printed or saved. No forecasts, errors or tests were computed. (Values were read only to check that each cell is a positive number.)

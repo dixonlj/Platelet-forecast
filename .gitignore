@@ -55,3 +55,16 @@ results/m10/raw/
 # v11 package exceptions
 !paper/changes_v10_to_v11.md
 !paper/refcheck/v11_number_check.md
+
+# Study 2: licensed or restricted data, never commit
+# (NHSBT has printed no open licence; Brazil Hemoprod raw files are CC BY-ND and contain submitter details)
+private_data/
+study2/data/public/
+study2/data/
+study2/brazil_exploratory/data/
+study2/**/NHSBT_*.xlsx
+# Study 2 confirmatory outputs that contain NHSBT actual monthly values (no open licence)
+study2/results/nhsbt_confirmatory/forecasts_long.csv
+study2/results/nhsbt_confirmatory/naive_2021_vs_2019.csv
+# Form-filling aid with contact details; not part of the registration
+study2/prereg/osf_upload/osf_paste_sheet_study2.md

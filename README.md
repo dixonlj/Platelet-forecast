@@ -26,6 +26,19 @@ Files:
 - the note to add to the OSF registration: [`paper/osf_update_text.md`](paper/osf_update_text.md);
 - the results in plain English: [`paper/revision_results_summary.md`](paper/revision_results_summary.md).
 
+## Study 2: pre-registered forecast of national monthly platelet issues (NHSBT, England)
+
+Pre-registered on OSF **before** the analysis was run: https://osf.io/vrh2u/, DOI [10.17605/OSF.IO/VRH2U](https://doi.org/10.17605/OSF.IO/VRH2U) (registered 19 November 2026, 1:20 AM ET; confirmatory run started 11:48:52 AM ET the same day, with the code hashes checked against the registration).
+
+**Result (null).** At one month ahead, ETS and SARIMA differed from a "same month last year" baseline by less than 1 unit/day on average (95% intervals about −6 to +4 units/day, against roughly 680 units/day issued), and the calendar regression was 7.8 units/day worse on average. Under the pre-registered rule, none of the three could be told apart from the baseline. Not being able to tell them apart is not proof that they are equal.
+
+- Plain-language summary, deviations, timeline and hashes: [`study2/results/CONFIRMATORY_RESULTS_SUMMARY.md`](study2/results/CONFIRMATORY_RESULTS_SUMMARY.md)
+- Plan and frozen code: [`study2/prereg/`](study2/prereg/) (`osf_prereg_study2_draft_v3.md`, `nhsbt_analysis.py`, `inference.py`, `FROZEN_CODE.sha256`)
+- Output tables (errors and statistics only): [`study2/results/nhsbt_confirmatory/`](study2/results/nhsbt_confirmatory/)
+- The NHSBT spreadsheet is **not** included (no open licence). It is public at NHSBT's Parliamentary Questions transparency page; the snapshot hash is in the plan. Output files that contain the actual monthly values are also left out.
+
+These are national monthly supplier issues, not hospital daily demand. Educational and advisory only: not clinical advice and not ordering advice for any hospital. The analysis was drafted and reviewed with AI assistance; an AI review does not replace review by a human statistician or transfusion-medicine expert.
+
 ## What it does
 
 Platelets expire within days, so blood banks balance waste (units that expire) against shortages (emergency orders). This project asks a simple question: **do better forecasts cut simulated waste when the number of short days is held fixed?**
@@ -201,7 +214,7 @@ data/              public Aachen data (CC BY 4.0) and synthetic example data
 scripts/           analysis code (01-17, 19-44, plus shared helpers)
 charts/            key charts, including those used in the paper
 results/           summary tables and run logs for each milestone (m10 = v10 re-analysis)
-study2/            Stanford replication code and results (no data files)
+study2/            Study 2: NHSBT pre-registration, frozen code and results; Stanford replication (no data files)
 prereg/            the analysis plan and its input fingerprints (registered on OSF after the analyses)
 paper/             draft v10 (sources, Word, PDF), journal plan, deviations, OSF note; draft v9 layout PDFs
 ```

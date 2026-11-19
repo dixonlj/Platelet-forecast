@@ -1,0 +1,7 @@
+comparison,horizon,nw_lags,n,dm_hln,p_value,role
+ets - naive,1,0,36,-2.2902220940585694,0.02814899201399015,confirmatory input
+ets - naive,1,2,36,-1.845871273358248,0.07338323191430483,descriptive check only
+sarima - naive,1,0,36,-2.173934575276995,0.03655951925006436,confirmatory input
+sarima - naive,1,2,36,-1.8556203429999187,0.0719446734326018,descriptive check only
+regression - naive,1,0,36,1.9592408439506555,0.05808819808457534,confirmatory input
+regression - naive,1,2,36,1.6793651849544509,0.10198785999223665,descriptive check only

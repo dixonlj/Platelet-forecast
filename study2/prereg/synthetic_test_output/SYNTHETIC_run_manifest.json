@@ -1,0 +1,31 @@
+{
+  "data_label": "SYNTHETIC",
+  "input_file": "/workspace/platelet-forecast/study2/prereg/synthetic_test_output/SYNTHETIC_workbook_made_up_numbers.xlsx",
+  "input_sha256": "7445c9c1f7bc9475349f23f4c35997236e0a8017a887ec11b5dc5b91dc2fb47f",
+  "months": [
+    "2016-04",
+    "2025-10",
+    115
+  ],
+  "columns": [
+    "Month",
+    "Red Blood Cells",
+    "Platelets",
+    "Fresh Frozen Plasma",
+    "Cryoprecipitate"
+  ],
+  "seed": 20261118,
+  "n_boot": 10000,
+  "python": "3.13.5",
+  "software": {
+    "statsmodels": "0.15.0",
+    "numpy": "2.5.5",
+    "scipy": "1.18.1",
+    "openpyxl": "3.1.5"
+  },
+  "script_sha256": {
+    "nhsbt_analysis.py": "dcb2f18cf590505db266574b317368cf2d719126644e6d2f064aaf07404354ac",
+    "inference.py": "0e5248d473a0bb216f1d1e20d7536f0c3401b4e04e11bb3033f66a0528e0bf64"
+  },
+  "run_at": "2026-11-19T00:18:51-05:00"
+}
