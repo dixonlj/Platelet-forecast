@@ -234,6 +234,6 @@ paper/             draft v10 (sources, Word, PDF), journal plan, deviations, OSF
 
 - **Code:** MIT licence (see `LICENSE`).
 - **Data:** CC BY 4.0, Schilling et al. 2022 (see above).
-- **Citation:** if you use this work, please cite it using `CITATION.cff` and also cite the data source. This version (v0.11.0) is archived on Zenodo: https://doi.org/10.5281/zenodo.24237979. The analysis plan is registered (retrospectively) on OSF: https://doi.org/10.17605/OSF.IO/PHQ42.
+- **Citation:** if you use this work, please cite it using `CITATION.cff` and also cite the data source. All versions are archived on Zenodo under the concept DOI https://doi.org/10.5281/zenodo.24237978; the latest version is v0.12.0 (https://doi.org/10.5281/zenodo.24377375). The analysis plan is registered (retrospectively) on OSF: https://doi.org/10.17605/OSF.IO/PHQ42.
 
 Author: Liam Dixon, independent researcher ([ORCID 0009-0003-0610-197X](https://orcid.org/0009-0003-0610-197X)). Personal, educational project, not funded or endorsed by any employer.
