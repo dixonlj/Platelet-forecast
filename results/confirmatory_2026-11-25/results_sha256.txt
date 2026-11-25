@@ -1,0 +1,2 @@
+ca9a1e134e9a1bba2ccb9c98b6c82f0998fdc42b1650561441ebcf7d62d0d005  /agent/repos/transfusion-inventory-advisor/results/confirmatory/20261125T142446Z/report.json
+c511fd72940d4fbab5a1a42c7aa33edca3f2760f11f61f7c111144fc0e4c83b6  /agent/repos/transfusion-inventory-advisor/results/confirmatory/20261125T142446Z/summary.md

@@ -39,6 +39,29 @@ Pre-registered on OSF **before** the analysis was run: https://osf.io/vrh2u/, DO
 
 These are national monthly supplier issues, not hospital daily demand. Educational and advisory only: not clinical advice and not ordering advice for any hospital. The analysis was drafted and reviewed with AI assistance; an AI review does not replace review by a human statistician or transfusion-medicine expert.
 
+## Confirmatory results (Nov 25, 2026)
+
+The pre-registered comparison did not show that the SARIMA order-up-to rule
+wastes fewer platelets than a yearly 90th-percentile par. The gap was −1.6
+units a year (95% interval −4.2 to 0, p 0.081). Because that primary result
+was not shown, the network test and the Holm family are descriptive only.
+They are not confirmatory claims.
+
+The registration is public on OSF: [https://osf.io/tuj9p](https://osf.io/tuj9p)
+(DOI 10.17605/OSF.IO/TUJ9P). OSF no longer accepts new projects, so these
+results are archived in this repository, and a Zenodo deposit is the public
+archive that replaces a new OSF results project. The deposit is not made by
+this change. It waits for an explicit release.
+
+The files were copied from the analysis repository at commit
+[`a85902ba646f6054e187e8b5b154904a137e2d1e`](https://github.com/dixonlj/transfusion-inventory-advisor/commit/a85902ba646f6054e187e8b5b154904a137e2d1e).
+The code that ran is `5f079cee3da55e9727f204f74aa2db45fe8654ad`.
+
+The run files are in `results/confirmatory_2026-11-25/`. The write-up is
+`docs/CONFIRMATORY_RESULTS_2026-11-25.md`. Deviations from the frozen plan
+are in `docs/DEVIATIONS_2026-11-25.md`. The later seed check is
+`results_seed_check_2026-11-25/seed_check_2026-11-25.md`.
+
 ## What it does
 
 Platelets expire within days, so blood banks balance waste (units that expire) against shortages (emergency orders). This project asks a simple question: **do better forecasts cut simulated waste when the number of short days is held fixed?**
@@ -214,6 +237,8 @@ data/              public Aachen data (CC BY 4.0) and synthetic example data
 scripts/           analysis code (01-17, 19-44, plus shared helpers)
 charts/            key charts, including those used in the paper
 results/           summary tables and run logs for each milestone (m10 = v10 re-analysis)
+results/confirmatory_2026-11-25/  25 Nov 2026 confirmatory archive
+docs/              write-up and deviations for that confirmatory run
 study2/            Study 2: NHSBT pre-registration, frozen code and results; Stanford replication (no data files)
 prereg/            the analysis plan and its input fingerprints (registered on OSF after the analyses)
 paper/             draft v10 (sources, Word, PDF), journal plan, deviations, OSF note; draft v9 layout PDFs
@@ -234,6 +259,6 @@ paper/             draft v10 (sources, Word, PDF), journal plan, deviations, OSF
 
 - **Code:** MIT licence (see `LICENSE`).
 - **Data:** CC BY 4.0, Schilling et al. 2022 (see above).
-- **Citation:** if you use this work, please cite it using `CITATION.cff` and also cite the data source. All versions are archived on Zenodo under the concept DOI https://doi.org/10.5281/zenodo.24237978; the latest version is v0.12.0 (https://doi.org/10.5281/zenodo.24377375). The analysis plan is registered (retrospectively) on OSF: https://doi.org/10.17605/OSF.IO/PHQ42.
+- **Citation:** if you use this work, please cite it using `CITATION.cff` and also cite the data source. All versions are archived on Zenodo under the concept DOI https://doi.org/10.5281/zenodo.24237978; the latest published version is v0.12.0 (https://doi.org/10.5281/zenodo.24377375). Version 0.13.0 archives the 25 November 2026 confirmatory results and is not released until Liam Dixon says so. The analysis plan is registered (retrospectively) on OSF: https://doi.org/10.17605/OSF.IO/PHQ42.
 
 Author: Liam Dixon, independent researcher ([ORCID 0009-0003-0610-197X](https://orcid.org/0009-0003-0610-197X)). Personal, educational project, not funded or endorsed by any employer.
