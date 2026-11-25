@@ -1,0 +1,9 @@
+START 2026-11-25T13:50:07Z
+Aachen primary (confirmatory): a difference was not shown.
+Network (descriptive): a difference was not shown.
+Holm family (descriptive): SARIMA minus weekday baseline: not_shown; ETS minus SARIMA: not_shown; negative binomial minus SARIMA: not_shown.
+Git commit 5f079cee3da55e9727f204f74aa2db45fe8654ad.
+Descriptive and sensitivity outputs were computed. They are not part of the decision.
+Results: /agent/repos/transfusion-inventory-advisor/results/confirmatory/20261125T142446Z
+EXIT:0
+DONE

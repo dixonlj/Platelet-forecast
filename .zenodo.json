@@ -1,9 +1,9 @@
 {
   "title": "Demand forecasts versus a standing order for platelet ordering: a simulation study of public data from two hospitals, with a retrospectively registered analysis plan",
   "upload_type": "software",
-  "version": "0.12.0",
-  "publication_date": "2026-11-19",
-  "description": "Code, result files and manuscript (draft v11) for an educational, advisory-only simulation study comparing demand forecasts with a standing order for platelet ordering. It uses only public aggregate data: daily platelet counts from University Hospital Aachen, 2008-2018 (Schilling et al., JMIR Med Inform 2022, CC BY 4.0) and the Stanford pip example data (GPL-2 or later). The analysis plan was registered retrospectively on OSF Registries on 14 November 2026, after the analyses were run (doi:10.17605/OSF.IO/PHQ42). Version 0.12.0 adds Study 2: a comparison of simple seasonal forecasting methods (ETS, SARIMA, a calendar regression) against a same-month-last-year baseline on national monthly platelet issues from NHS Blood and Transplant (England, April 2016 to October 2025), pre-registered on OSF before the analysis was run (doi:10.17605/OSF.IO/VRH2U). At one month ahead, ETS and SARIMA differed from the baseline by less than 1 unit/day on average and the calendar regression was 7.8 units/day worse on average; under the pre-registered rule none of the three could be told apart from the baseline, which is not proof that they are equal. The NHSBT spreadsheet is not included because it has no open licence. An AI review does not replace review by human experts. Educational only: not a clinical tool and not ordering advice.",
+  "version": "0.13.0",
+  "publication_date": "2026-11-25",
+  "description": "Code, result files and manuscript (draft v11) for an educational, advisory-only simulation study comparing demand forecasts with a standing order for platelet ordering. It uses only public aggregate data: daily platelet counts from University Hospital Aachen, 2008-2018 (Schilling et al., JMIR Med Inform 2022, CC BY 4.0) and the Stanford pip example data (GPL-2 or later). The analysis plan was registered retrospectively on OSF Registries on 14 November 2026, after the analyses were run (doi:10.17605/OSF.IO/PHQ42). Version 0.12.0 adds Study 2: a comparison of simple seasonal forecasting methods (ETS, SARIMA, a calendar regression) against a same-month-last-year baseline on national monthly platelet issues from NHS Blood and Transplant (England, April 2016 to October 2025), pre-registered on OSF before the analysis was run (doi:10.17605/OSF.IO/VRH2U). At one month ahead, ETS and SARIMA differed from the baseline by less than 1 unit/day on average and the calendar regression was 7.8 units/day worse on average; under the pre-registered rule none of the three could be told apart from the baseline, which is not proof that they are equal. The NHSBT spreadsheet is not included because it has no open licence. An AI review does not replace review by human experts. Version 0.13.0 archives a separate confirmatory comparison, registered at doi:10.17605/OSF.IO/TUJ9P: a difference was not shown between a SARIMA order-up-to rule and a yearly 90th-percentile par. The network and Holm results from that run are descriptive. Educational only: not a clinical tool and not ordering advice.",
   "creators": [
     {
       "name": "Dixon, Liam",
@@ -33,6 +33,12 @@
     },
     {
       "identifier": "10.17605/OSF.IO/VRH2U",
+      "relation": "isSupplementTo",
+      "scheme": "doi",
+      "resource_type": "other"
+    },
+    {
+      "identifier": "10.17605/OSF.IO/TUJ9P",
       "relation": "isSupplementTo",
       "scheme": "doi",
       "resource_type": "other"

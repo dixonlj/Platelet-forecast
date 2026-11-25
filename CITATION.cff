@@ -7,11 +7,11 @@ authors:
     given-names: Liam
     orcid: "https://orcid.org/0009-0003-0610-197X"
     affiliation: "Independent researcher"
-version: "0.12.0"
-date-released: "2026-11-19"
+version: "0.13.0"
+date-released: "2026-11-25"
 license: MIT
 repository-code: "https://github.com/dixonlj/Platelet-forecast"
-abstract: "Code, results and manuscript (draft v11) for an educational, advisory-only simulation study comparing demand forecasts with a standing order for platelet ordering, using public aggregate data from University Hospital Aachen (CC BY 4.0) and the Stanford pip example data. Version 0.12.0 adds Study 2: a comparison of simple seasonal forecasting methods on national monthly platelet issues from NHS Blood and Transplant (England, 2016-2025), pre-registered on OSF before the analysis was run (doi:10.17605/OSF.IO/VRH2U). Its result was null: none of the three methods could be told apart from a same-month-last-year baseline under the pre-registered rule. The NHSBT spreadsheet is not included. Not a clinical tool and not ordering advice."
+abstract: "Code, results and manuscript (draft v11) for an educational, advisory-only simulation study comparing demand forecasts with a standing order for platelet ordering, using public aggregate data from University Hospital Aachen (CC BY 4.0) and the Stanford pip example data. Version 0.12.0 adds Study 2: a comparison of simple seasonal forecasting methods on national monthly platelet issues from NHS Blood and Transplant (England, 2016-2025), pre-registered on OSF before the analysis was run (doi:10.17605/OSF.IO/VRH2U). Its result was null: none of the three methods could be told apart from a same-month-last-year baseline under the pre-registered rule. The NHSBT spreadsheet is not included. Version 0.13.0 archives a separate confirmatory comparison, registered at doi:10.17605/OSF.IO/TUJ9P: a difference was not shown between a SARIMA order-up-to rule and a yearly 90th-percentile par. The network and Holm results from that run are descriptive. Not a clinical tool and not ordering advice."
 keywords:
   - platelet inventory
   - demand forecasting
@@ -29,6 +29,12 @@ identifiers:
   - type: doi
     value: "10.5281/zenodo.24237979"
     description: "Previous version (v0.11.0), archived on Zenodo"
+  - type: doi
+    value: "10.5281/zenodo.24377375"
+    description: "Previous version (v0.12.0), archived on Zenodo"
+  - type: doi
+    value: "10.17605/OSF.IO/TUJ9P"
+    description: "Registration for the 25 November 2026 confirmatory order-up-to comparison"
   - type: doi
     value: "10.17605/OSF.IO/PHQ42"
     description: "Study 1 analysis plan, registered retrospectively on OSF Registries on 14 November 2026, after the analyses were run"

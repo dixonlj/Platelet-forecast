@@ -1,0 +1,39 @@
+{
+  "network_name": "Cinderwell Health Network",
+  "network_id": "CWHN",
+  "seed": 20261121,
+  "start": "2021-01-01",
+  "end": "2030-12-31",
+  "n_days": 3652,
+  "n_sites": 16,
+  "regional_phi": 0.55,
+  "regional_sigma": 0.08,
+  "surges": [
+    {
+      "name": "winter_respiratory_2026",
+      "start": "2026-01-12",
+      "days": 42,
+      "peak": 0.35
+    },
+    {
+      "name": "winter_respiratory_2029",
+      "start": "2029-01-07",
+      "days": 28,
+      "peak": 0.28
+    }
+  ],
+  "injury_week": {
+    "name": "summer_injury_2027",
+    "start": "2027-07-02",
+    "days": 7,
+    "extra": {
+      "CW01": 0.45,
+      "CW02": 0.15,
+      "CW04": 0.12,
+      "CW06": 0.1
+    }
+  },
+  "holiday_calendar": "advisor.synthetic_trauma.us_holidays (US federal holidays plus Christmas Eve and Black Friday; observed-date shifts ignored)",
+  "count_draw": "negative binomial, variance = mu + alpha * mu^2",
+  "disclaimer": "SYNTHETIC / FICTIONAL. Method-stability only, not real-world accuracy."
+}
